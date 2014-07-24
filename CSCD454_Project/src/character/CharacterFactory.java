@@ -13,7 +13,7 @@ public class CharacterFactory {
 	public static Character getCharacter(String type) {
 		switch(type) {
 		case "warrior":
-			return new Warrior();
+			return new Assassin();
 		case "rogue":
 			return new Rogue();
 		case "priest":

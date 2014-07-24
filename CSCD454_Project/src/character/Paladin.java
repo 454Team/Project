@@ -4,7 +4,7 @@ package character;
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
-public class Paladin implements Character {
+public class Paladin extends Character {
 
 	private double strength;
 	private double agility;
@@ -24,18 +24,6 @@ public class Paladin implements Character {
 	
 	@Override
 	public void fight() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void heal() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -70,6 +58,7 @@ public class Paladin implements Character {
 		return false;
 	}
 
+	//Status Setters and Getters
 	public double getStrength() {
 		return strength;
 	}
@@ -117,4 +106,5 @@ public class Paladin implements Character {
 	public void setLuck(double luck) {
 		this.luck = luck;
 	}
+
 } // End Paladin

@@ -4,7 +4,7 @@ package character;
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
-public class Mage implements Character {
+public class Mage extends Character {
 
 	private double strength;
 	private double agility;
@@ -30,12 +30,6 @@ public class Mage implements Character {
 
 	@Override
 	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void heal() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -117,4 +111,5 @@ public class Mage implements Character {
 	public void setDexterity(double dexterity) {
 		this.dexterity = dexterity;
 	}
+
 } // End Mage
