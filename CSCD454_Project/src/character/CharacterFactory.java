@@ -11,19 +11,20 @@ public class CharacterFactory {
 	 * @return Character based on input type.
 	 */
 	public static Character getCharacter(String type) {
-		
-		if(type.equals("warrior"))
+		switch(type) {
+		case "warrior":
 			return new Warrior();
-		else if(type.equals("rogue"))
+		case "rogue":
 			return new Rogue();
-		else if(type.equals("priest"))
+		case "priest":
 			return new Priest();
-		else if(type.equals("paladin"))
+		case "paladin":
 			return new Paladin();
-		else if(type.equals("mage"))
+		case "mage":
 			return new Mage();
-		//TODO: Change return from null to something safe.
-		return null;
+		default:
+			return null;
+		}
 	} // End getCharacter
 	
 } // End CharacterFactory

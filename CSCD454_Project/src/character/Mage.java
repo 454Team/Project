@@ -53,10 +53,4 @@ public class Mage implements Character {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	@Override
-	public void test() {
-		System.out.println("I am a Mage!");
-	}
-
 } // End Mage

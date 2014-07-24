@@ -53,10 +53,4 @@ public class Priest implements Character {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	@Override
-	public void test() {
-		System.out.println("I am a Priest!");
-	}
-
 } // End Priest

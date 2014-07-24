@@ -54,9 +54,4 @@ public class Warrior implements Character {
 		return false;
 	}
 
-	@Override
-	public void test() {
-		System.out.println("I am a Warrior!");
-	}
-
 } // End Warrior

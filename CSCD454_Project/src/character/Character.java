@@ -6,8 +6,6 @@ package character;
  */
 public interface Character {
 	
-	public void test(); // REMOVE --> Used for testing
-	
 	public void fight();
 	public void specialAttack();
 	public void heal();
