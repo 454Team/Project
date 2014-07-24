@@ -21,7 +21,7 @@ public class CharacterFactory {
 		case "paladin":
 			return new Paladin();
 		case "mage":
-			return new Mage();
+			return new Sorcerer();
 		default:
 			return null;
 		}

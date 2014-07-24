@@ -4,7 +4,7 @@ package character;
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
-public class Mage extends Character {
+public class Sorcerer extends Character {
 
 	private double strength;
 	private double agility;
@@ -13,7 +13,7 @@ public class Mage extends Character {
 	private double luck;
 	private double dexterity;
 	
-	public Mage() {
+	public Sorcerer() {
 		this.setStrength(20.0);
 		this.setAgility(30.0);
 		this.setIntelligence(100.0);
