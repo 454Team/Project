@@ -8,8 +8,8 @@ import PaladinSkills.paladinSkills;
  * CSCD 454 | Design Patterns
  */
 public abstract class Character {
-	private paladinSkills skill1;
-	private paladinSkills skill2;
+	private SkillsMain skill1;
+	private SkillsMain skill2;
 	
 	public Character()
 	{
@@ -27,11 +27,11 @@ public abstract class Character {
 		skill2.attack();
 	}
 
-	public void setSkill2(paladinSkills skill2) {
+	public void setSkill2(SkillsMain skill2) {
 		this.skill2 = skill2;
 	}
 	
-	public void setSkill1(paladinSkills skill1) {
+	public void setSkill1(SkillsMain skill1) {
 		this.skill1 = skill1;
 	}
 	

@@ -283,11 +283,11 @@
                               <net.java.amateras.uml.editpart.ConnectionBendpoint>
                                 <weight>0.5</weight>
                                 <d1>
-                                  <width>-460</width>
+                                  <width>-474</width>
                                   <height>-2</height>
                                 </d1>
                                 <d2>
-                                  <width>12</width>
+                                  <width>-2</width>
                                   <height>-588</height>
                                 </d2>
                               </net.java.amateras.uml.editpart.ConnectionBendpoint>
@@ -2689,7 +2689,7 @@
                               <constraint>
                                 <height>-1</height>
                                 <width>-1</width>
-                                <x>124</x>
+                                <x>93</x>
                                 <y>39</y>
                               </constraint>
                               <sourceConnections>
