@@ -64,4 +64,8 @@ public class Constants {
 	public static final String FIRE_HEAD_ARMOR = " [H] fire armor";
 	public static final String LIGHING_HEAD_ARMOR = " [H] lighting armor";
 	
+	
+	public static final int HERO_TEAM_NUMBER = 3;
+	public static final int MONSTER_TEAM_NUMBER = 3;
+	public static final int MONSTER_RANDOM = 100;
 }	
