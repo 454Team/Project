@@ -1,14 +1,18 @@
 package FightingBattle.HeroSlots;
 
-import Monster.Monster;
+import Items.characterSlots.Slots;
 import character.Character;
 import character.CharacterFactory;
 public abstract class HeroSlots {
 	protected Character hero= null;
-	protected Monster monster1= null;
-	protected Monster monster2= null;
-	protected Monster monster3= null;
+	protected boolean isDefeated = false;
 	protected boolean isHeroAvailable = false;
+	
+	private Slots weapon;
+	private Slots headarmor;
+	private Slots bodyarmor;
+	// more slots here
+	
 	public HeroSlots(){
 		
 	}
@@ -21,6 +25,11 @@ public abstract class HeroSlots {
 	public boolean checkHeroAvailable(){
 		return isHeroAvailable;
 	}
+	
+	public boolean checkDefeated(){
+		return isDefeated;
+	}
+	
 	
 	public void normalAttack() {
 		hero.specialAttack();
