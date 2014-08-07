@@ -13,7 +13,7 @@ public class Paladin extends Character {
 	
 	
 	public Paladin() {
-		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0);
+		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0, "Paladin");
 	} // End DVC
 	
 	@Override
@@ -48,6 +48,10 @@ public class Paladin extends Character {
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
+	}
+	
+	public String toString() {
+		return super.toString();
 	}
 
 } // End Paladin

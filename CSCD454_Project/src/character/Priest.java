@@ -9,7 +9,7 @@ import character.PriestSkills.*;
 public class Priest extends Character {
 
 	public Priest() {
-		super(new Heal(), new Resurrection(), new Sanctuary(), 10.0, 20.0, 70.0, 30.0, 30.0, 60.0);
+		super(new Heal(), new Resurrection(), new Sanctuary(), 10.0, 20.0, 70.0, 30.0, 30.0, 60.0, "Priest");
 	} // End DVC
 	
 	@Override
@@ -52,4 +52,7 @@ public class Priest extends Character {
 		return super.getVitality() > 0;
 	}
 
+	public String toString() {
+		return super.toString();
+	}
 } // End Priest

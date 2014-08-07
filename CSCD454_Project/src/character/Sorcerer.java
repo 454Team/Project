@@ -9,7 +9,7 @@ import character.SorcererSkills.*;
 public class Sorcerer extends Character {
 
 	public Sorcerer() {
-		super(new EarthSpike(), new MagicCrasher(), new SoulBurn(), 30.0, 50.0, 100.0, 60.0, 20.0, 60.0);
+		super(new EarthSpike(), new MagicCrasher(), new SoulBurn(), 30.0, 50.0, 100.0, 60.0, 20.0, 60.0, "Sorcerer");
 	} // End DVC
 	
 	@Override
@@ -50,6 +50,10 @@ public class Sorcerer extends Character {
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
+	}
+	
+	public String toString() {
+		return super.toString();
 	}
 
 } // End Mage
