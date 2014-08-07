@@ -8,6 +8,7 @@ public class AngelBodyArmor extends BodyArmor {
 		this.name = Constants.ANGEL_BODY_ARMOR;
 		this.defenseScore = 10;
 		this.money = 300;
+		this.paybackMoney = this.money /2 ;
 	}
 
 }

@@ -29,13 +29,22 @@ public class StorageInventory implements BalanceAccess{
 	}
 	
 	public void showStorage(){
+		
+		System.out.println("Total Balance : " + access(Accesscreate()));
+		
+		
 		if(itemList.size() != 0){
+			System.out.println("List item : ");
 			for(Item item : itemList){
 				System.out.println("item :" + item.toString());
 			}
 		}else{
 			System.out.println("There is no item in list");
 		}
+		
+		System.out.println();
+		
+		
 	}
 	
 	public boolean addItem(Item item){
@@ -84,6 +93,22 @@ public class StorageInventory implements BalanceAccess{
 			if(item.compareName(removedItem)){				// right item
 				if(paidTransaction(Accesscreate(), item)){
 					itemList.remove(item);
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public boolean sellItemfromStorage(String removedItem){
+		for(Item item : itemList){
+			if(item.compareName(removedItem)){				// right item
+				if(paidTransaction(Accesscreate(), item)){
+					itemList.remove(item);
+					
+					// print out money
+					System.out.println("Balance :" + access(Accesscreate()));
+					
 					return true;
 				}
 			}

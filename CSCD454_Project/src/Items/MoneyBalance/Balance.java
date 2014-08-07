@@ -31,6 +31,8 @@ public class Balance {
 	public boolean CompleteAddedTransaction(Item item){
 		if(!item.validate(balance))
 			return false;
+		if(item.getPaybackMoney() == 0)			// basic item
+			return false;
 		this.balance = this.balance + item.getPaybackMoney();
 		return true;
 	}

@@ -7,5 +7,6 @@ public class BasicBodyArmor extends BodyArmor {
 		this.name = Constants.BASIC_SWORD;
 		this.defenseScore = 4;
 		this.money = 50;
+		this.paybackMoney = 0;
 	}
 }
