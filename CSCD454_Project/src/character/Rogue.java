@@ -9,7 +9,7 @@ import character.RogueSkills.*;
 public class Rogue extends Character {
 
 	public Rogue() {
-		super(new BackStab(), new DeadlyInfect(), new Intimidate(), 100.0, 60.0, 20.0, 0, 50.0, 60.0);
+		super(new BackStab(), new DeadlyInfect(), new Intimidate(), 100.0, 60.0, 20.0, 0, 50.0, 60.0, "Rogue");
 	} // End DVC
 	
 	@Override
@@ -50,6 +50,10 @@ public class Rogue extends Character {
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
+	}
+	
+	public String toString() {
+		return super.toString();
 	}
 
 } // End Rogue

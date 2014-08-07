@@ -19,6 +19,8 @@ public abstract class Character {
 	private double dexterity;
 	private long experience;
 	
+	private String desc;
+	
 	private int maxDmg, minDmg;
 	
 	private SkillsMain skill1;
@@ -40,9 +42,10 @@ public abstract class Character {
 		this.setLuck(50.0);
 		this.setStrength(50.0);
 		this.setVitality(50.0);
+		this.setDesc("Default");
 	} // End DVC
 	
-	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality) {
+	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
 		/* Set Skills */
 		this.setSkill1(skill1);
 		this.setSkill2(skill2);
@@ -55,6 +58,7 @@ public abstract class Character {
 		this.setLuck(luck);
 		this.setStrength(strength);
 		this.setVitality(vitality);
+		this.setDesc(desc);
 	} // End EVC
 	
 	public int fight() {
@@ -148,4 +152,15 @@ public abstract class Character {
 		this.experience = experience;
 	}
 
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String toString() {
+		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.getStrength() + "dmg";
+	}
 } // End Character
