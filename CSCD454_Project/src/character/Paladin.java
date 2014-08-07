@@ -1,25 +1,15 @@
 package character;
 
+import character.PaladinSkills.*;
+
 /*
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
 public class Paladin extends Character {
 
-	private double strength;
-	private double agility;
-	private double intelligence;
-	private double vitality;
-	private double luck;
-	private double dexterity;
-	
 	public Paladin() {
-		this.setStrength(80.0);
-		this.setAgility(90.0);
-		this.setIntelligence(0);
-		this.setVitality(80.0);
-		this.setLuck(30.0);
-		this.setDexterity(40.0);
+		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0);
 	} // End DVC
 	
 	@Override
@@ -56,55 +46,6 @@ public class Paladin extends Character {
 	public boolean isAlive() {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	//Status Setters and Getters
-	public double getStrength() {
-		return strength;
-	}
-
-	public void setStrength(double strength) {
-		this.strength = strength;
-	}
-
-	public double getAgility() {
-		return agility;
-	}
-
-	public void setAgility(double agility) {
-		this.agility = agility;
-	}
-
-	public double getIntelligence() {
-		return intelligence;
-	}
-
-	public void setIntelligence(double intelligence) {
-		this.intelligence = intelligence;
-	}
-
-	public double getVitality() {
-		return vitality;
-	}
-
-	public void setVitality(double vitality) {
-		this.vitality = vitality;
-	}
-
-	public double getDexterity() {
-		return dexterity;
-	}
-
-	public void setDexterity(double dexterity) {
-		this.dexterity = dexterity;
-	}
-
-	public double getLuck() {
-		return luck;
-	}
-
-	public void setLuck(double luck) {
-		this.luck = luck;
 	}
 
 } // End Paladin

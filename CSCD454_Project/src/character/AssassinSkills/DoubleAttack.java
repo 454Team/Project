@@ -4,7 +4,7 @@ package character.AssassinSkills;
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class doubleAttack implements assassinSkills{
+public class DoubleAttack implements assassinSkills{
 
 	@Override
 	public void attack() {

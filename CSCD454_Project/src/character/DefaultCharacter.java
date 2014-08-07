@@ -1,25 +1,17 @@
 package character;
 
-import character.PriestSkills.*;
-
 /*
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
-public class Priest extends Character {
+public class DefaultCharacter extends Character {
 
-	public Priest() {
-		super(new Heal(), new Resurrection(), new Sanctuary(), 10.0, 20.0, 70.0, 30.0, 30.0, 60.0);
+	public DefaultCharacter() {
+		super();
 	} // End DVC
 	
 	@Override
 	public void fight() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void specialAttack() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -54,4 +46,4 @@ public class Priest extends Character {
 		return false;
 	}
 
-} // End Priest
+} // End Default Character

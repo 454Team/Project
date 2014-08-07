@@ -7,7 +7,7 @@ package character.AssassinSkills;
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class throwVenomKnife implements assassinSkills{
+public class ThrowVenomKnife implements assassinSkills{
 
 	@Override
 	public void attack() {
