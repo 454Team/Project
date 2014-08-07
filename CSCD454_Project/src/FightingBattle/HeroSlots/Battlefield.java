@@ -34,31 +34,28 @@ public class Battlefield {
 
 	}
 	
-	public void loadHero(character.Character hero1,character.Character hero2,character.Character hero3){
-		Heroslot1 = new CharacterBattleSlot1(hero1);
-		Heroslot2 = new CharacterBattleSlot1(hero2);
-		Heroslot3 = new CharacterBattleSlot1(hero3);
+	public Battlefield loadHero(HeroSlots hero1,HeroSlots hero2,HeroSlots hero3){
+		//Heroslot1 = new CharacterBattleSlot1(hero1);
+		//Heroslot2 = new CharacterBattleSlot1(hero2);
+		//Heroslot3 = new CharacterBattleSlot1(hero3);
 		
-		heroTurn.push(Heroslot1);
-		heroTurn.push(Heroslot2);
-		heroTurn.push(Heroslot3);
+		heroTurn.push(hero1);
+		heroTurn.push(hero2);
+		heroTurn.push(hero3);
 		
-	}
+		return battleField;
+	}	
 	
-	public void loadHero(String hero1,String hero2,String hero3){
-		Heroslot1 = new CharacterBattleSlot1(hero1);
-		Heroslot2 = new CharacterBattleSlot1(hero2);
-		Heroslot3 = new CharacterBattleSlot1(hero3);
+	public Battlefield loadMonster(int roomLevel){
+		monsterSlot1 = new MonsterSlot1();
+		monsterSlot2 = new MonsterSlot2();
+		monsterSlot3 = new MonsterSlot3();
 		
 		monsterTurn.push(monsterSlot1);
 		monsterTurn.push(monsterSlot2);
 		monsterTurn.push(monsterSlot3);
-	}	
-	
-	private void loadMonster(){
-		monsterSlot1 = new MonsterSlot1();
-		monsterSlot2 = new MonsterSlot2();
-		monsterSlot3 = new MonsterSlot3();
+		
+		return battleField;
 	}
 	
 	public void fight(){			// normal attack , 1-1 push 1 out of stack
@@ -68,11 +65,17 @@ public class Battlefield {
 			
 			HeroSlots hero = heroTurn.pop();
 			
+			System.out.println(" hero " + hero.toString() + "is out");
+			
 			heroTurn.push(hero);
 			
 			// monster attack
 			
 			MonsterSlots monster = monsterTurn.pop();
+			
+			monster.loseHealth(25);
+			
+			System.out.println(" monster " + monster.toString() + "is out");
 			
 			monsterTurn.push(monster);
 			

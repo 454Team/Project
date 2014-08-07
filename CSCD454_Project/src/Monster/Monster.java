@@ -10,6 +10,7 @@ public interface Monster {
 	
 	public void fight();
 	public void defend();
+	public void defend(double damage);
 	public void specialAttack();
 	public void specialAttack2();
 	public boolean isAlive();

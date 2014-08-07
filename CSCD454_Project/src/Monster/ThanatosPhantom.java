@@ -12,7 +12,7 @@ public class ThanatosPhantom implements Monster {
 	public double intelligence = 86.00;
 	public double dexterity = 147.00;
 	public double luck = 32.00;
-	
+	public double health = 100;
 	@Override
 	public void fight() {
 		// TODO Auto-generated method stub
@@ -71,6 +71,12 @@ public class ThanatosPhantom implements Monster {
 	public double getLuck() {
 		return luck;
 	}
+	
+	@Override
+	public void defend(double damage) {
+		this.health -=damage;
+	}
+	
 
 
 } // End ThanatosPhantom

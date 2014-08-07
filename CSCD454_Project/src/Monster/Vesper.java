@@ -12,7 +12,7 @@ public class Vesper implements Monster {
 	public double intelligence = 70.00;
 	public double dexterity = 160.00;
 	public double luck = 150.00;
-	
+	public double health = 100;
 	@Override
 	public void fight() {
 		// TODO Auto-generated method stub
@@ -33,7 +33,8 @@ public class Vesper implements Monster {
 
 	@Override
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
+		if(this.health <=0)
+			return true;
 		return false;
 	}
 
@@ -70,6 +71,13 @@ public class Vesper implements Monster {
 
 	public double getLuck() {
 		return luck;
+	}
+
+	@Override
+	public void defend(double damage) {
+		this.health -=damage;
+		if(this.health < 0)
+			this.health = 0;
 	}
 
 

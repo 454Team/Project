@@ -30,7 +30,6 @@ public abstract class HeroSlots {
 		return isDefeated;
 	}
 	
-	
 	public void normalAttack() {
 		hero.specialAttack();
 	}

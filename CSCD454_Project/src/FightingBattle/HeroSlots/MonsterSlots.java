@@ -19,8 +19,12 @@ public abstract class MonsterSlots {
 		return isMonsterAvailable;
 	}
 	
+	public void loseHealth(double damage){
+		monster.defend(damage);
+	}
+	
 	public boolean checkDefeated(){
-		return isDefeated;
+		return monster.isAlive();
 	}
 
 }

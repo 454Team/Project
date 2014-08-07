@@ -12,7 +12,7 @@ public class Ifrit implements Monster {
 	public double intelligence = 190.00;
 	public double dexterity = 199.00;
 	public double luck = 50.00;
-	
+	public double health = 100;
 	@Override
 	public void fight() {
 		// TODO Auto-generated method stub
@@ -72,5 +72,10 @@ public class Ifrit implements Monster {
 		return luck;
 	}
 
+	@Override
+	public void defend(double damage) {
+		this.health -=damage;
+	}
+	
 
 } // End Priest

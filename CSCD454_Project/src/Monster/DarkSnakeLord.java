@@ -4,7 +4,7 @@ package Monster;
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class DarkSnakeLord implements Monster {
+public class DarkSnakeLord extends MonsterAttributes implements Monster {
 
 	public double strength = 70.00;
 	public double agility = 83.00;
@@ -12,6 +12,7 @@ public class DarkSnakeLord implements Monster {
 	public double intelligence = 80.00;
 	public double dexterity = 164.00;
 	public double luck = 88.00;
+	public double health = 100;
 	
 	@Override
 	public void fight() {
@@ -70,6 +71,11 @@ public class DarkSnakeLord implements Monster {
 
 	public double getLuck() {
 		return luck;
+	}
+
+	@Override
+	public void defend(double damage) {
+		this.health -=damage;
 	}
 
 

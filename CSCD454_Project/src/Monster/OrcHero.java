@@ -12,6 +12,7 @@ public class OrcHero implements Monster {
 	public double intelligence = 70.00;
 	public double dexterity = 105.00;
 	public double luck = 90.00;
+	public double health = 100;
 	
 	@Override
 	public void fight() {
@@ -72,5 +73,10 @@ public class OrcHero implements Monster {
 		return luck;
 	}
 
-
+	@Override
+	public void defend(double damage) {
+		this.health -=damage;
+	}
+	
+	
 } // End OrcHero

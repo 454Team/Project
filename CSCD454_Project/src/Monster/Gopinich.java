@@ -12,7 +12,8 @@ public class Gopinich implements Monster {
 	public double intelligence = 103.00;
 	public double dexterity = 152.00;
 	public double luck = 35.00;
-
+	public double health = 100;
+	
 	@Override
 	public void fight() {
 		// TODO Auto-generated method stub
@@ -71,6 +72,12 @@ public class Gopinich implements Monster {
 
 	public double getLuck() {
 		return luck;
+	}
+
+	@Override
+	public void defend(double damage) {
+		this.health -= damage;
+		
 	}
 
 
