@@ -1,5 +1,5 @@
-import PaladinSkills.Gospel;
 import character.Paladin;
+import character.PaladinSkills.Gospel;
 
 /**
  * 

@@ -1,7 +1,7 @@
 package character;
 
-import PaladinSkills.Default;
-import PaladinSkills.paladinSkills;
+import character.PaladinSkills.Default;
+import character.PaladinSkills.paladinSkills;
 
 /*
  * @author Kevin Borling
