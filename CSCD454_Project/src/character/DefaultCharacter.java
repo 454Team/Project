@@ -1,19 +1,13 @@
 package character;
 
-import java.util.Random;
-
-import character.PaladinSkills.*;
-
 /*
  * @author Kevin Borling
  * CSCD 454 | Design Patterns
  */
-public class Paladin extends Character {
-	
-	
-	
-	public Paladin() {
-		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0);
+public class DefaultCharacter extends Character {
+
+	public DefaultCharacter() {
+		super();
 	} // End DVC
 	
 	@Override
@@ -50,4 +44,4 @@ public class Paladin extends Character {
 		return super.getVitality() > 0;
 	}
 
-} // End Paladin
+} // End Default Character
