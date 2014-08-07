@@ -13,9 +13,8 @@ public class Sorcerer extends Character {
 	} // End DVC
 	
 	@Override
-	public void fight() {
-		// TODO Auto-generated method stub
-		
+	public int fight() {
+		return super.fight();
 	}
 
 	@Override
@@ -50,8 +49,7 @@ public class Sorcerer extends Character {
 
 	@Override
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+		return super.getVitality() > 0;
 	}
 
 } // End Mage

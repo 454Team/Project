@@ -1,5 +1,7 @@
 package character;
 
+import java.util.Random;
+
 import character.PaladinSkills.Default;
 import character.PaladinSkills.paladinSkills;
 
@@ -17,9 +19,13 @@ public abstract class Character {
 	private double dexterity;
 	private long experience;
 	
+	private int maxDmg, minDmg;
+	
 	private SkillsMain skill1;
 	private SkillsMain skill2;
 	private SkillsMain skill3;
+	
+	private final Random random = new Random();
 	
 	public Character() {
 		/* Set Skills */
@@ -51,7 +57,9 @@ public abstract class Character {
 		this.setVitality(vitality);
 	} // End EVC
 	
-	public abstract void fight();
+	public int fight() {
+		return random.nextInt(maxDmg - minDmg) + minDmg;
+	}
 	
 	public void specialAttack() {
 		skill1.attack();
@@ -59,6 +67,10 @@ public abstract class Character {
 	
 	public void specialAttack2() {
 		skill2.attack();
+	}
+	
+	public void specialAttack3() {
+		skill3.attack();
 	}
 
 	public void setSkill2(SkillsMain skill2) {

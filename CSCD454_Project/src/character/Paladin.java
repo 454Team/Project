@@ -1,5 +1,7 @@
 package character;
 
+import java.util.Random;
+
 import character.PaladinSkills.*;
 
 /*
@@ -7,15 +9,16 @@ import character.PaladinSkills.*;
  * CSCD 454 | Design Patterns
  */
 public class Paladin extends Character {
-
+	
+	
+	
 	public Paladin() {
 		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0);
 	} // End DVC
 	
 	@Override
-	public void fight() {
-		// TODO Auto-generated method stub
-		
+	public int fight() {
+		return super.fight();
 	}
 
 	@Override
@@ -44,8 +47,7 @@ public class Paladin extends Character {
 
 	@Override
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+		return super.getVitality() > 0;
 	}
 
 } // End Paladin

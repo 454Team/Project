@@ -23,7 +23,7 @@ public class CharacterFactory {
 		case "mage":
 			return new Sorcerer();
 		default:
-			return null;
+			return new DefaultCharacter();
 		}
 	} // End getCharacter
 	

@@ -13,9 +13,8 @@ public class Rogue extends Character {
 	} // End DVC
 	
 	@Override
-	public void fight() {
-		// TODO Auto-generated method stub
-		
+	public int fight() {
+		return super.fight();
 	}
 
 	@Override
@@ -50,8 +49,7 @@ public class Rogue extends Character {
 
 	@Override
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+		return super.getVitality() > 0;
 	}
 
 } // End Rogue
