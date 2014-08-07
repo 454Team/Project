@@ -16,8 +16,20 @@ import Items.WeaponArmor.axes.DwarvenWarAxe;
 import Items.WeaponArmor.axes.EbonyWarAxe;
 import Items.WeaponArmor.axes.ElvenWarAxe;
 import Items.WeaponArmor.axes.ForswornAxe;
+import Items.WeaponArmor.bodyArmor.AngelBodyArmor;
 import Items.WeaponArmor.bodyArmor.BasicBodyArmor;
+import Items.WeaponArmor.bodyArmor.ChainVestBodyArmor;
+import Items.WeaponArmor.bodyArmor.ClothBodyArmor;
+import Items.WeaponArmor.bodyArmor.FireBodyArmor;
+import Items.WeaponArmor.bodyArmor.FrozenBodyArmor;
+import Items.WeaponArmor.bodyArmor.LightingBodyArmor;
+import Items.WeaponArmor.headArmor.AngelHeadArmor;
 import Items.WeaponArmor.headArmor.BasicHeadArmor;
+import Items.WeaponArmor.headArmor.ChainVestHeadArmor;
+import Items.WeaponArmor.headArmor.ClothHeadArmor;
+import Items.WeaponArmor.headArmor.FireHeadArmor;
+import Items.WeaponArmor.headArmor.FrozenHeadArmor;
+import Items.WeaponArmor.headArmor.LightingHeadArmor;
 import Items.WeaponArmor.sword.AkaviriSword;
 import Items.WeaponArmor.sword.BasicSword;
 import Items.WeaponArmor.sword.BladesSword;
@@ -132,6 +144,62 @@ public class ItemFactory implements BalanceAccess{
 			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.BASIC_BODY_ARMOR)){
 			item = new BasicBodyArmor();
+			item = Itemvalidate(item);
+		}
+		
+		/*
+		 * body armor
+		 */
+	
+		else if(typeName.equals(Constants.CHAIN_VEST_BODY_ARMOR)){
+			item = new ChainVestBodyArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.CLOTH_BODY_ARMOR)){
+			item = new ClothBodyArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.FROZEN_BODY_ARMOR)){
+			item = new FrozenBodyArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.ANGEL_BODY_ARMOR)){
+			item = new AngelBodyArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.FIRE_BODY_ARMOR)){
+			item = new FireBodyArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.LIGHING_BODY_ARMOR)){
+			item = new LightingBodyArmor();
+			item = Itemvalidate(item);
+		}
+		
+
+		/*
+		 * head armor names
+		 */
+		/*public static final String CHAIN_VEST_HEAD_ARMOR = " [H] Chain Vest";
+		public static final String CLOTH_HEAD_ARMOR = " [H] Cloth armor";
+		public static final String FROZEN_HEAD_ARMOR = " [H] Frozen armor";	
+		public static final String ANGEL_HEAD_ARMOR = " [H] Guardian Angel armor";
+		public static final String FIRE_HEAD_ARMOR = " [H] fire armor";
+		public static final String LIGHING_HEAD_ARMOR = " [H] lighting armor";
+		*/
+		
+		else if(typeName.equals(Constants.CHAIN_VEST_HEAD_ARMOR)){
+			item = new ChainVestHeadArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.CLOTH_HEAD_ARMOR)){
+			item = new ClothHeadArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.FROZEN_HEAD_ARMOR)){
+			item = new FrozenHeadArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.ANGEL_HEAD_ARMOR)){
+			item = new AngelHeadArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.FIRE_HEAD_ARMOR)){
+			item = new FireHeadArmor();
+			item = Itemvalidate(item);
+		}else if(typeName.equals(Constants.LIGHING_HEAD_ARMOR)){
+			item = new LightingHeadArmor();
 			item = Itemvalidate(item);
 		}
 		

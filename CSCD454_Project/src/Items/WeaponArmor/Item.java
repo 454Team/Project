@@ -31,6 +31,10 @@ public class Item {
 		return this.name.equals(item.getName());
 	}
 	
+	public boolean compareName(String item){
+		return this.name.equals(item);
+	}
+	
 	public String getName(){
 		return this.name;
 	}

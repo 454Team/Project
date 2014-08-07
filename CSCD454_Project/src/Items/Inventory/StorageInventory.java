@@ -10,9 +10,9 @@ import Items.WeaponArmor.Item;
 public class StorageInventory implements BalanceAccess{
 	
 	private static final int max = 100;
-	private StorageInventory storageInventory = null;
+	private static StorageInventory storageInventory = null;
 	private List<Item> itemList = null;
-	public StorageInventory create(){
+	public static StorageInventory create(){
 		if(storageInventory == null){
 			storageInventory = new StorageInventory();
 		}
@@ -28,10 +28,22 @@ public class StorageInventory implements BalanceAccess{
 		return itemList.size() >= max ;
 	}
 	
+	public void showStorage(){
+		if(itemList.size() != 0){
+			for(Item item : itemList){
+				System.out.println("item :" + item.toString());
+			}
+		}else{
+			System.out.println("There is no item in list");
+		}
+	}
+	
 	public boolean addItem(Item item){
-		if(!checkOverLimit()){
-			itemList.add(item);
-			return true;
+		if(item != null){
+			if(!checkOverLimit()){
+				itemList.add(item);
+				return true;
+			}
 		}
 		return false;
 	}
@@ -46,15 +58,26 @@ public class StorageInventory implements BalanceAccess{
 	}
 	
 	public Item getItemfromStorage(Item neededItem){
+		Item temp_item = null;
 		for(Item item : itemList){
 			if(item.compareName(neededItem)){				// right item
-				return item;
+				temp_item = item;
+				itemList.remove(item);
 			}
 		}
-		return null;
+		return temp_item;
 	}
 	
-	
+	public Item getItemfromStorage(String neededItem){
+		Item temp_item = null;
+		for(Item item : itemList){
+			if(item.compareName(neededItem)){				// right item
+				temp_item = item;
+				itemList.remove(item);
+			}
+		}
+		return temp_item;
+	}
 	
 	public boolean sellItemfromStorage(Item removedItem){
 		for(Item item : itemList){

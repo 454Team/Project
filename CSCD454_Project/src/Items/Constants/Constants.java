@@ -2,7 +2,7 @@ package Items.Constants;
 
 public class Constants {
 	
-	public static final double initialBalance = 100;
+	public static final double initialBalance = 100000;
 	
 	/*
 	 * basic names
