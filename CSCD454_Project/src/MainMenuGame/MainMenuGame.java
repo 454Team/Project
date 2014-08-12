@@ -24,10 +24,10 @@ public class MainMenuGame {
 		int choice = 0;
 		while(choice != 4)
 		{
-			System.out.println("Please choose what you would like to do./n"
-					+ "1). Enter the inventory./n"
-					+ "2). Enter a room to fight./n"
-					+ "3). Enter the store./n"
+			System.out.println("Please choose what you would like to do.\n"
+					+ "1). Enter the inventory.\n"
+					+ "2). Enter a room to fight.\n"
+					+ "3). Enter the store.\n"
 					+ "4). Exit.");
 			try{   
 				choice = kb.nextInt();
