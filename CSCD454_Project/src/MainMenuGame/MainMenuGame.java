@@ -33,7 +33,7 @@ public class MainMenuGame {
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-			    break;
+		    	System.out.println("Please enter a valid option");
 			}    		
 			switch(choice)
 		    {
@@ -64,7 +64,7 @@ public class MainMenuGame {
 				name = kb.nextLine();
 		    }
 		    catch(Exception e){
-			    break;
+		    	System.out.println("Please enter a valid option");
 			}    		
 			if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
 				System.out.println(name + " cannot be bought\n");
@@ -84,7 +84,7 @@ public class MainMenuGame {
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-			    break;
+		    	System.out.println("Please enter a valid option");
 			}    	
 			//TODO: Need to finish rooms before doing this
 			switch(choice)
@@ -92,7 +92,7 @@ public class MainMenuGame {
 		    	case 1: 
 		    		break;
 			   	//for testing
-			   	default:
+		    	case 99:
 			   		BattleTester.main(new String[0]);
 			   		break;
 		    }
@@ -117,7 +117,7 @@ public class MainMenuGame {
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-			    break;
+		    	System.out.println("Please enter a valid option");
 			}    		
 			switch(choice)
 		    {
