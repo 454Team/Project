@@ -2,8 +2,7 @@ package character;
 
 import java.util.Random;
 
-import character.PaladinSkills.Default;
-import character.PaladinSkills.paladinSkills;
+import character.DefaultSkills.*;
 
 /*
  * @author Kevin Borling
