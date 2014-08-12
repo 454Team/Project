@@ -33,7 +33,7 @@ public class MainMenuGame {
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-		    	System.out.println("Please enter a valid option");
+		    	break;
 			}    		
 			switch(choice)
 		    {
@@ -55,17 +55,19 @@ public class MainMenuGame {
 	
 	private static void storeMenu() {
 		int choice = 0;
-		String name = "";
-		while(choice != 4)
-		{
-			System.out.println("Please enter the name of the item you would like to buy\n"
-					+ "Or press 4 to exit\n");
-			try{   
+		String name = "Avakiri Sword";
+		while(choice != 4){
+			System.out.println("Please enter the name of the item you would like to buy\n");
+			try{   		
 				name = kb.nextLine();
 		    }
 		    catch(Exception e){
 		    	System.out.println("Please enter a valid option");
-			}    		
+			}   
+			try{
+				choice = Integer.parseInt(name);
+			}
+			catch(Exception e){}
 			if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
 				System.out.println(name + " cannot be bought\n");
 			}
@@ -78,13 +80,14 @@ public class MainMenuGame {
 		int choice = -1;
 		while(choice != 0)
 		{
+			choice = 100;
 			System.out.println("Please enter what level of room that you would like to enter (integer from 1 to 10).\n"
 					+ "Or please enter zero to go back to the main menu.\n");
 			try{   
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-		    	System.out.println("Please enter a valid option");
+		    	break;
 			}    	
 			//TODO: Need to finish rooms before doing this
 			switch(choice)
@@ -117,7 +120,7 @@ public class MainMenuGame {
 				choice = kb.nextInt();
 		    }
 		    catch(Exception e){
-		    	System.out.println("Please enter a valid option");
+		    	break;
 			}    		
 			switch(choice)
 		    {
