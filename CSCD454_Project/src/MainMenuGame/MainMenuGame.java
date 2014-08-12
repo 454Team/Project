@@ -105,7 +105,7 @@ public class MainMenuGame {
 		int choice = 0;
 		String name = "";
 		Item item;
-		while(choice != 4)
+		while(choice != 3)
 		{
 			System.out.println("**Your Storage List**\n");
     		StorageInventory.create().showStorage();
