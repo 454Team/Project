@@ -25,7 +25,8 @@ public class hasChosenItemsState implements State {
 	}
 
     public void clickPlayGame() {
-    	//TODO: Initialize game
+    	//Initializes main menu for game play
+    	MainMenuGame.MainMenuGame.main(new String [0]);
     	//Once game is played reset the game so he can play again
 		gumballMachine.setState(gumballMachine.hasNotChosenCharactersState());
     	}
