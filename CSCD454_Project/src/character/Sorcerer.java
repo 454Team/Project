@@ -24,18 +24,6 @@ public class Sorcerer extends Character {
 	}
 
 	@Override
-	public void defend() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void retreat() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void equip() {
 		// TODO Auto-generated method stub
 		

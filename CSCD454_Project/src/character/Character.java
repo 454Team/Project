@@ -17,6 +17,8 @@ public abstract class Character {
 	private double luck;
 	private double dexterity;
 	private long experience;
+	private long cap;
+	private boolean isDefendingNow;
 	
 	private String desc;
 	
@@ -42,8 +44,10 @@ public abstract class Character {
 		this.setStrength(50.0);
 		this.setVitality(50.0);
 		this.setDesc("Default");
+		this.setCap(10);
+		this.isDefendingNow = false;
 	} // End DVC
-	
+
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
 		/* Set Skills */
 		this.setSkill1(skill1);
@@ -58,6 +62,8 @@ public abstract class Character {
 		this.setStrength(strength);
 		this.setVitality(vitality);
 		this.setDesc(desc);
+		this.setCap(10);
+		this.isDefendingNow = false;
 	} // End EVC
 	
 	public int fight() {
@@ -88,8 +94,35 @@ public abstract class Character {
 		this.skill3 = skill3;
 	}
 	
-	public abstract void defend();
-	public abstract void retreat();
+	public boolean isDefending() {
+		return isDefendingNow;
+	}
+	
+	public void defend() {
+		if(random.nextInt(100) < this.dexterity)
+			this.isDefendingNow = true;
+	} // End defend
+	
+	//TODO: check cap multiplication
+	public boolean levelUp() {
+		if(this.experience >= this.cap)
+		{
+			this.setCap(this.cap * 2);
+			addStats();
+			return true;
+		}
+		return false;
+	}
+	
+	private void addStats() {
+		this.setAgility(this.agility + 5);
+		this.setDexterity(this.dexterity + 5);
+		this.setIntelligence(this.intelligence + 5);
+		this.setStrength(this.strength + 5);
+		this.setVitality(this.vitality + 5);
+		this.setLuck(this.luck + 1);	
+	}
+
 	public abstract void equip();
 	public abstract void useItem();
 	public abstract boolean isAlive();
@@ -157,6 +190,14 @@ public abstract class Character {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+	
+	public long getCap() {
+		return cap;
+	}
+
+	public void setCap(long cap) {
+		this.cap = cap;
 	}
 
 	public String toString() {
