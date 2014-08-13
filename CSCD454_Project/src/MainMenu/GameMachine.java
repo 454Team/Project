@@ -1,5 +1,7 @@
 package MainMenu;
 
+import java.util.Scanner;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -19,8 +21,8 @@ public class GameMachine {
 		this.state = hasNotChosenCharactersState;
 	}
  
-	public void clickChooseCharacters() {
-		state.clickChooseCharacters();
+	public void clickChooseCharacters(Scanner scanchoice) {
+		state.clickChooseCharacters(scanchoice);
 	}
  
 	public void clickChooseItems() {

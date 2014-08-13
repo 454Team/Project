@@ -12,15 +12,15 @@ public class CharacterFactory {
 	 */
 	public static Character getCharacter(String type) {
 		switch(type) {
-		case "warrior":
+		case "Assassin":
 			return new Assassin();
-		case "rogue":
+		case "Rogue":
 			return new Rogue();
-		case "priest":
+		case "Priest":
 			return new Priest();
-		case "paladin":
+		case "Paladin":
 			return new Paladin();
-		case "mage":
+		case "Mage":
 			return new Sorcerer();
 		default:
 			return new DefaultCharacter();

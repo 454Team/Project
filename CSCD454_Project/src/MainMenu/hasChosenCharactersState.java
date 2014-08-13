@@ -1,5 +1,7 @@
 package MainMenu;
 
+import java.util.Scanner;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -12,7 +14,7 @@ public class hasChosenCharactersState implements State {
     }
  
     //TODO: Maybe we should let him re-choose characters if he desires?
-	public void clickChooseCharacters() {
+	public void clickChooseCharacters(Scanner kb) {
 		System.out.println("You have already chosen your characters"); 
 		//gumballMachine.setState(gumballMachine.hasChosenCharactersState());
 	}

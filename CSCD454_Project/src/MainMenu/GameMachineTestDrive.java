@@ -11,24 +11,24 @@ public class GameMachineTestDrive {
 	public static void main(String[] args) {
 		GameMachine gameMachine = new GameMachine();
 
-		System.out.println(gameMachine);
+		//System.out.println(gameMachine);
 		
 		Scanner scanchoice = new Scanner(System.in);
-		int choiceentry = 1;
+		int choiceentry = 0;
 		
 		do {
 			//Print out menu
 			System.out.println("Please press: "
-					+ "\n1 to display the hint of what you need to do at the given moment"
-					+ "\n2 to choose characters that you would like to play with"
-					+ "\n3 to choose items that you would like to equip your character with"
-					+ "\n4 to play the game!"
-					+ "\n5 to exit the program.");	  
+					+ "\n1). Display the hint of what you need to do at the given moment"
+					+ "\n2). Choose characters that you would like to play with"
+					+ "\n3). Choose items that you would like to equip your character with"
+					+ "\n4). Play the game!"
+					+ "\n5). Exit the program.");	  
 			//For Testing purposes
-			System.out.println(gameMachine);
+			//System.out.println(gameMachine);
 			//try taking the input
 			try{
-				choiceentry = scanchoice.nextInt();
+				choiceentry = Integer.parseInt(scanchoice.nextLine());
 			}catch(Exception e){
 				System.out.println("Please enter a valid menu choice.");
 			}
@@ -39,7 +39,7 @@ public class GameMachineTestDrive {
 		            gameMachine.clickTutorial();
 		            break;
 		        case 2: 
-		            gameMachine.clickChooseCharacters();
+		            gameMachine.clickChooseCharacters(scanchoice);
 		            break;
 		        case 3: 
 		            gameMachine.clickChooseItems();

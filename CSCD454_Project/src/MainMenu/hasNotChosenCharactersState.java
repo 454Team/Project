@@ -1,5 +1,10 @@
 package MainMenu;
 
+import java.util.Scanner;
+
+import character.Character;
+import character.CharacterFactory;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -11,9 +16,21 @@ public class hasNotChosenCharactersState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void clickChooseCharacters() {
+	public void clickChooseCharacters(Scanner kb) {
 		//Method for choosing characters
+		System.out.println("Please input what type of heroes you would like to use one by one");
+		for(int heroes = 1; heroes < 4; heroes ++){
+			try{
+				//TODO: Save heroes that come back
+				Character character1 = CharacterFactory.getCharacter(kb.next());
+				System.out.println("Character " + heroes + " picked");
+				System.out.println(character1.toString());
+			}catch(Exception e){
+				System.out.println("Failed to pick that hero, please try again.");
+			}
+		}
 		gumballMachine.setState(gumballMachine.hasChosenCharactersState());
+		kb.nextLine();
 	}
  
 	public void clickChooseItems() {

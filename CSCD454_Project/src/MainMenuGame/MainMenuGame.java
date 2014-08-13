@@ -89,6 +89,7 @@ public class MainMenuGame {
 			switch(choice)
 		    {
 		    	case 1: 
+		    		
 		    		break;
 			   	//for testing
 		    	case 99:
@@ -109,7 +110,7 @@ public class MainMenuGame {
 			System.out.println("Please choose what you would like to do.\n"
 					+ "1). List everything in your inventory\n"
 					+ "2). Sell item from inventory\n"
-					+ "3). Equip Item from inventory **TODO:"
+					+ "3). Equip Item from inventory **TODO:\n"
 					+ "4). Exit.");
 			try{   
 				choice = kb.nextInt();

@@ -1,5 +1,7 @@
 package MainMenu;
 
+import java.util.Scanner;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -11,7 +13,7 @@ public class hasChosenItemsState implements State {
 		this.gumballMachine = gumballMachine;
 	}
   
-	public void clickChooseCharacters() {
+	public void clickChooseCharacters(Scanner kb) {
 		System.out.println("You have already chosen characters to play with.");
 	}
  
