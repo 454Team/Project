@@ -10,8 +10,9 @@ package character.SorcererSkills;
 public class SoulBurn implements SorcererSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just decreased my enemies agility in half!");
+		return 0;
 	}
 
 }

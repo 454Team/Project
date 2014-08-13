@@ -10,8 +10,9 @@ package character.PaladinSkills;
 public class Gospel implements paladinSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just sang the Gospel and increased my team members stats!");
+		return 0;
 	}
 
 }

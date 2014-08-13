@@ -10,8 +10,9 @@ package Monster.IfritSkills;
 public class PulseStrike implements IfritSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a pulse strike!");
+		return 0;
 	}
 
 }

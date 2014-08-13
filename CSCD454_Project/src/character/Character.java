@@ -22,7 +22,8 @@ public abstract class Character {
 	
 	private String desc;
 	
-	private int maxDmg, minDmg;
+	private int maxDmg = (int) this.strength;
+	private int minDmg = (int) (this.strength*.9);
 	
 	private SkillsMain skill1;
 	private SkillsMain skill2;

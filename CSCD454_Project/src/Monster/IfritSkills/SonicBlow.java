@@ -7,8 +7,9 @@ package Monster.IfritSkills;
 public class SonicBlow implements IfritSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a sonic blow!");
+		return 0;
 	}
 
 }

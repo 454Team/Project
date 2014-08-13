@@ -10,8 +10,9 @@ package character.PriestSkills;
 public class Heal implements priestSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just all my teammates!");
+		return 0;
 	}
 
 }

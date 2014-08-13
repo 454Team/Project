@@ -10,8 +10,9 @@ package character.AssassinSkills;
 public class ThrowVenomKnife implements assassinSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just thre a venemous knife!");
+		return 0;
 	}
 
 }

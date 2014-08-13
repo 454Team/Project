@@ -10,8 +10,9 @@ package character.PaladinSkills;
 public class Sacrifice implements paladinSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just sacrifized some of my life to do a major attack!");
+		return 0;
 	}
 
 }

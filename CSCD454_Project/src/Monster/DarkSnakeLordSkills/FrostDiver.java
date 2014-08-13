@@ -10,8 +10,9 @@ package Monster.DarkSnakeLordSkills;
 public class FrostDiver implements DarkSnakeLordSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a frost dive!");
+		return 0;
 	}
 
 }

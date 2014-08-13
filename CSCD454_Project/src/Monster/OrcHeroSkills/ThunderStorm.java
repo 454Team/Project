@@ -7,8 +7,9 @@ package Monster.OrcHeroSkills;
 public class ThunderStorm implements OrcHeroSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a sonic blow!");
+		return 0;
 	}
 
 }

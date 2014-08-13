@@ -10,8 +10,9 @@ package Monster.OrcHeroSkills;
 public class GuidedAttack implements OrcHeroSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a guided attack!");
+		return 0;
 	}
 
 }

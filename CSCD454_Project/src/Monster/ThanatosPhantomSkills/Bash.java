@@ -10,8 +10,9 @@ package Monster.ThanatosPhantomSkills;
 public class Bash implements ThanatosPhantomSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just bashed the opponent!");
+		return 0;
 	}
 
 }

@@ -10,8 +10,9 @@ package Monster.OrcHeroSkills;
 public class SpiralPierce implements OrcHeroSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just created a thunder storm!");
+		return 0;
 	}
 
 }

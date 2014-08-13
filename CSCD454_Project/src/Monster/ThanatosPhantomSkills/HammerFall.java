@@ -10,8 +10,9 @@ package Monster.ThanatosPhantomSkills;
 public class HammerFall implements ThanatosPhantomSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a hammer fall!");
+		return 0;
 	}
 
 }

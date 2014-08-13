@@ -7,8 +7,9 @@ package Monster.VesperSkills;
 public class DarknessJupitel implements VesperSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just created a darkness jupitel!");
+		return 0;
 	}
 
 }

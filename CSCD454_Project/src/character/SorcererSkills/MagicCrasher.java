@@ -7,8 +7,9 @@ package character.SorcererSkills;
 public class MagicCrasher implements SorcererSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just crashed a bunch of magic at the enemy, Yo!");
+		return 0;
 	}
 
 }

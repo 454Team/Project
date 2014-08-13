@@ -1,5 +1,5 @@
 package character;
 
 public interface SkillsMain {
-	public abstract void attack();
+	public abstract int attack();
 }

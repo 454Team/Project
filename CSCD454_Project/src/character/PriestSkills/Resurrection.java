@@ -10,8 +10,9 @@ package character.PriestSkills;
 public class Resurrection implements priestSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just resurrected my teammates!");
+		return 0;
 	}
 
 }

@@ -7,5 +7,5 @@ import character.SkillsMain;
  * CSCD 454 | Design Patterns
  */
 public interface defaultSkills extends SkillsMain {
-	public void attack();
+	public int attack();
 }

@@ -10,8 +10,9 @@ package Monster.IfritSkills;
 public class Earthquake implements IfritSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just created an earthquake!");
+		return 0;
 	}
 
 }

@@ -7,8 +7,9 @@ package Monster.ThanatosPhantomSkills;
 public class SoulStrike implements ThanatosPhantomSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just did a soul strike!");
+		return 0;
 	}
 
 }

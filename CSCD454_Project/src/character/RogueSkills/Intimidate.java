@@ -7,8 +7,9 @@ package character.RogueSkills;
 public class Intimidate implements rogueSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just intimidated the enemy!");
+		return 0;
 	}
 
 }

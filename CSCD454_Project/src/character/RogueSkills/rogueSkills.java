@@ -8,5 +8,5 @@ import character.SkillsMain;
  * CSCD 454 | Design Patterns
  */
 public interface rogueSkills extends SkillsMain {
-	public void attack();
+	public int attack();
 }

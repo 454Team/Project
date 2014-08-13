@@ -7,8 +7,9 @@ package Monster.ThanatosPhantomSkills;
 public class Default implements ThanatosPhantomSkills {
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I tried to do a special attack but I haven't set it so I failed at this turn...");
+		return 0;
 	}
 
 }

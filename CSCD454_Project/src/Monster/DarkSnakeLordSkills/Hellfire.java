@@ -10,8 +10,9 @@ package Monster.DarkSnakeLordSkills;
 public class Hellfire implements DarkSnakeLordSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just rained hell fire!");
+		return 0;
 	}
 
 }

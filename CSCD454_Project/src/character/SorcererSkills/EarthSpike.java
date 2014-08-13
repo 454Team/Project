@@ -10,8 +10,9 @@ package character.SorcererSkills;
 public class EarthSpike implements SorcererSkills{
 
 	@Override
-	public void attack() {
+	public int attack() {
 		System.out.println("I just spiked the enemy with some earth!");
+		return 0;
 	}
 
 }
