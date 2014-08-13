@@ -1,5 +1,7 @@
 package Monster;
 
+import Monster.RoomVisitor.MonsterRoomVisitor;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -78,6 +80,11 @@ public class Gopinich implements Monster {
 	public void defend(double damage) {
 		this.health -= damage;
 		
+	}
+
+	@Override
+	public void accept(MonsterRoomVisitor room) {
+		room.visit(this);
 	}
 
 

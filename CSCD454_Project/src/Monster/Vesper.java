@@ -1,5 +1,7 @@
 package Monster;
 
+import Monster.RoomVisitor.MonsterRoomVisitor;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -78,6 +80,11 @@ public class Vesper implements Monster {
 		this.health -=damage;
 		if(this.health < 0)
 			this.health = 0;
+	}
+
+	@Override
+	public void accept(MonsterRoomVisitor room) {
+		room.visit(this);		
 	}
 
 

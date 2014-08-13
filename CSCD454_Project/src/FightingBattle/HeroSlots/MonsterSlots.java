@@ -10,7 +10,7 @@ public class MonsterSlots {
 	protected boolean isMonsterAvailable = false;
 	protected boolean isDefeated = false;
 	public MonsterSlots() {
-		monster = MonsterFactory.getMonster(Constants.MONSTER_RANDOM);
+		monster = MonsterFactory.getMonster();
 		isMonsterAvailable = true;
 		isDefeated = false;
 	}

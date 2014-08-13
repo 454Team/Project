@@ -1,5 +1,7 @@
 package Monster;
 
+import Monster.RoomVisitor.MonsterRoomVisitor;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -7,6 +9,8 @@ package Monster;
 public interface Monster {
 	
 	public void test(); //TESTING
+	
+	public void accept(MonsterRoomVisitor room);
 	
 	public void fight();
 	public void defend();
