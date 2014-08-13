@@ -1,23 +1,20 @@
 package FightingBattle.HeroSlots;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
-import Items.Constants.Constants;
+import Items.characterSlots.HeroSlot;
+import MainMenu.MainMenuHeroSlot;
 import Monster.Monster;
 
 public class Battlefield {
 
 	private static Battlefield battleField= null;
-	private Stack<HeroSlots> heroTurn;
+	private Stack<BattleHeroSlots> heroTurn;
 	private Stack<MonsterSlots> monsterTurn;
 	
-	private HeroSlots Heroslot1;
-	private HeroSlots Heroslot2;
-	private HeroSlots Heroslot3;
-	
-	private MonsterSlots monsterSlot1;
-	private MonsterSlots monsterSlot2;
-	private MonsterSlots monsterSlot3;
+	private ArrayList<BattleHeroSlots> heroSlots = new ArrayList<BattleHeroSlots>();
+	private ArrayList<MonsterSlots> monsterSlots = new ArrayList<MonsterSlots>();
 	
 	private int numMonster = 3;
 	
@@ -29,31 +26,25 @@ public class Battlefield {
 	}
 	
 	private Battlefield() {
-		heroTurn = new Stack<HeroSlots>();			// no turn at first
+		heroTurn = new Stack<BattleHeroSlots>();			// no turn at first
 		monsterTurn = new Stack<MonsterSlots>();			// no turn for monster at first
 
 	}
 	
-	public Battlefield loadHero(HeroSlots hero1,HeroSlots hero2,HeroSlots hero3){
-		//Heroslot1 = new CharacterBattleSlot1(hero1);
-		//Heroslot2 = new CharacterBattleSlot1(hero2);
-		//Heroslot3 = new CharacterBattleSlot1(hero3);
-		
-		heroTurn.push(hero1);
-		heroTurn.push(hero2);
-		heroTurn.push(hero3);
+	public Battlefield loadHero(ArrayList<MainMenuHeroSlot> heroies){
+		for(int i = 0 ; i < heroies.size();i++){
+			heroSlots.add(new BattleHeroSlots(heroies.get(i)));
+			heroTurn.push(heroSlots.get(i));
+		}
 		
 		return battleField;
 	}	
 	
-	public Battlefield loadMonster(int roomLevel){
-		monsterSlot1 = new MonsterSlot1();
-		monsterSlot2 = new MonsterSlot2();
-		monsterSlot3 = new MonsterSlot3();
-		
-		monsterTurn.push(monsterSlot1);
-		monsterTurn.push(monsterSlot2);
-		monsterTurn.push(monsterSlot3);
+	public Battlefield loadMonster(ArrayList<Monster> monsters){
+		for(int i = 0 ; i < monsters.size();i++){
+			monsterSlots.add(new MonsterSlots(monsters.get(i)));
+			monsterTurn.push(monsterSlots.get(i));
+		}
 		
 		return battleField;
 	}
@@ -63,7 +54,7 @@ public class Battlefield {
 		while(checkEndFight() == false){
 			//hero attack
 			
-			HeroSlots hero = heroTurn.pop();
+			BattleHeroSlots hero = heroTurn.pop();
 			
 			System.out.println(" hero " + hero.toString() + "is out");
 			

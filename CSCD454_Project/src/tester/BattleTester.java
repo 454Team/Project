@@ -1,22 +1,28 @@
 package tester;
 
+import java.util.ArrayList;
+
 import FightingBattle.HeroSlots.Battlefield;
-import FightingBattle.HeroSlots.CharacterBattleSlot1;
-import FightingBattle.HeroSlots.CharacterBattleSlot2;
-import FightingBattle.HeroSlots.CharacterBattleSlot3;
-import FightingBattle.HeroSlots.HeroSlots;
+import FightingBattle.HeroSlots.BattleHeroSlots;
+import Items.characterSlots.HeroSlot;
+import MainMenu.MainMenuHeroSlot;
 
 public class BattleTester {
 
 	public static void main(String [] args){
 		
-		HeroSlots hero1 = new CharacterBattleSlot1("warrior");
-		HeroSlots hero2 = new CharacterBattleSlot2("warrior");
-		HeroSlots hero3 = new CharacterBattleSlot3("warrior");
+		//create 3 hero
+		int numberOfHero = 3;
+		ArrayList<HeroSlot> heroies = new ArrayList<HeroSlot>();
+		for(int i = 0 ; i < numberOfHero ; i++){
+			heroies.add(new MainMenuHeroSlot());
+		}
 		
-		Battlefield.create().loadHero(hero1, hero2, hero3)
-							.loadMonster(1)
-							.fight();
+		
+		
+		//Battlefield.create().loadHero(hero1, hero2, hero3)
+		//					.loadMonster(1)
+		//					.fight();
 		
 	}
 

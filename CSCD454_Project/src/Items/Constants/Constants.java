@@ -68,4 +68,6 @@ public class Constants {
 	public static final int HERO_TEAM_NUMBER = 3;
 	public static final int MONSTER_TEAM_NUMBER = 3;
 	public static final int MONSTER_RANDOM = 100;
+	
+	public static final String CHARACTER_RANDOM = "random";
 }	

@@ -13,14 +13,11 @@ public class WeaponSlots implements Slots {
 	}
 	
 	@Override
-	public boolean swap(Item newItem) {
-		if(newItem.getClass().equals(weaponItem.getClass())){
+	public Item swap(Item newItem) {
+		Item temp = weaponItem;
 			weaponItem = null;
 			weaponItem = (WeaponItem) newItem;
-			return true;			// swap successed
-		}
-		return false;			// fail to swap
-		
+		return temp;	
 	}
 
 	public String toString(){
@@ -29,8 +26,13 @@ public class WeaponSlots implements Slots {
 	
 	@Override
 	public void remove() {
-		
+		this.weaponItem = (WeaponItem) ItemFactory.create().buyItem(Constants.BASIC_SWORD );			// free weapon here
 	}
+
+	@Override
+	public Item copyItem() {
+			return weaponItem;
+		}
 
 
 

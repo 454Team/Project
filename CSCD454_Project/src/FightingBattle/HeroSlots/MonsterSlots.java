@@ -4,7 +4,7 @@ import Items.Constants.Constants;
 import Monster.Monster;
 import Monster.MonsterFactory;
 
-public abstract class MonsterSlots {
+public class MonsterSlots {
 
 	protected Monster monster;
 	protected boolean isMonsterAvailable = false;
@@ -15,12 +15,26 @@ public abstract class MonsterSlots {
 		isDefeated = false;
 	}
 	
+	public MonsterSlots(Monster monster){
+		this.monster = monster;
+		isDefeated = false;
+		isMonsterAvailable = true;
+	}
+	
 	public boolean checkMonsterAvailable(){
 		return isMonsterAvailable;
 	}
 	
 	public void loseHealth(double damage){
 		monster.defend(damage);
+	}
+	
+	public void attack(){
+		monster.fight();
+	}
+	
+	public void defend(){
+		monster.defend();
 	}
 	
 	public boolean checkDefeated(){
