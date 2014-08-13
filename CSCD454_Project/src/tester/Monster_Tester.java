@@ -17,20 +17,20 @@ public class Monster_Tester {
 		Random randomGenerator = new Random();
 	    randomGenerator.nextInt(100);
 		
-		Monster character = MonsterFactory.getMonster();
-		character.test();
+		Monster character = MonsterFactory.getMonster(2);
+		System.out.println(character.toString());
 		
-		character = MonsterFactory.getMonster();
-		character.test();
+		character = MonsterFactory.getMonster(3);
+		System.out.println(character.toString());
 		
-		character = MonsterFactory.getMonster();
-		character.test();
+		character = MonsterFactory.getMonster(4);
+		System.out.println(character.toString());
 		
-		character = MonsterFactory.getMonster();
-		character.test();
+		character = MonsterFactory.getMonster(5);
+		System.out.println(character.toString());
 		
-		character = MonsterFactory.getMonster();
-		character.test();
+		character = MonsterFactory.getMonster(6);
+		System.out.println(character.toString());
 		
 	} // End main
 

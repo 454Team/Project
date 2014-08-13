@@ -1,89 +1,16 @@
 package Monster;
 
-import Monster.RoomVisitor.MonsterRoomVisitor;
+import Monster.OrcHeroSkills.SpiralPierce;
+import Monster.OrcHeroSkills.ThunderStorm;
 
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class OrcHero implements Monster {
+public class OrcHero extends Monster {
 
-	public double strength = 1.00;
-	public double agility = 91.00;
-	public double vitality = 30.00;
-	public double intelligence = 70.00;
-	public double dexterity = 105.00;
-	public double luck = 90.00;
-	public double health = 100;
-	
-	@Override
-	public void fight() {
-		// TODO Auto-generated method stub
-		
-	}
+	public OrcHero(int room) {
+		super(new ThunderStorm(), new SpiralPierce(), 91.0*room, 105.0*room, 70.00*room, 90.0*room, 1.0*room, 30.0*room, "Orc Hero");
+	} // End DVC
 
-	@Override
-	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void defend() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void test() {
-		System.out.println("I am a Orc Hero!");
-	}
-
-	@Override
-	public void specialAttack2() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public double getStrength() {
-		return strength;
-	}
-	
-	public double getAgility() {
-		return agility;
-	}
-
-	public double getVitality() {
-		return vitality;
-	}
-
-	public double getIntelligence() {
-		return intelligence;
-	}
-
-	public double getDexterity() {
-		return dexterity;
-	}
-
-	public double getLuck() {
-		return luck;
-	}
-
-	@Override
-	public void defend(double damage) {
-		this.health -=damage;
-	}
-
-	@Override
-	public void accept(MonsterRoomVisitor room) {
-		room.visit(this);		
-	}
-	
-	
 } // End OrcHero

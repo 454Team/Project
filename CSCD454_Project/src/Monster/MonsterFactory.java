@@ -15,7 +15,7 @@ public class MonsterFactory {
 	 * @param int Is the randomly generated number that is passed in to pick a monster to create.
 	 * @return Monster based on input type.
 	 */
-	public static Monster getMonster() {
+	public static Monster getMonster(int room) {
 		//Generates a random monster
 		int type = 999;
 		Random randomGenerator = new Random();
@@ -23,17 +23,17 @@ public class MonsterFactory {
 		type = randomGenerator.nextInt(MonsterFactory.getNumberOfMonsters());
 		
 		if(type == 0)
-			return new ThanatosPhantom();
+			return new ThanatosPhantom(room);
 		else if(type == 1)
-			return new OrcHero();
+			return new OrcHero(room);
 		else if(type == 2)
-			return new Ifrit();
+			return new Ifrit(room);
 		else if(type == 3)
-			return new Gopinich();
+			return new Gopinich(room);
 		else if(type == 4)
-			return new DarkSnakeLord();
+			return new DarkSnakeLord(room);
 		else // In worst case scenario return a default monster
-			return new Vesper();
+			return new Vesper(room);
 	} // End getMonster
 	
 	public static int getNumberOfMonsters(){

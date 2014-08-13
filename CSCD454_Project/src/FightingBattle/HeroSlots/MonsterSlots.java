@@ -10,7 +10,8 @@ public class MonsterSlots {
 	protected boolean isMonsterAvailable = false;
 	protected boolean isDefeated = false;
 	public MonsterSlots() {
-		monster = MonsterFactory.getMonster();
+		//TODO: put in what room number to getMonster();
+		monster = MonsterFactory.getMonster(2);
 		isMonsterAvailable = true;
 		isDefeated = false;
 	}
