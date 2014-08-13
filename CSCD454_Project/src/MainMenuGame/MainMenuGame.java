@@ -27,7 +27,7 @@ public class MainMenuGame {
 			System.out.println("Please choose what you would like to do.\n"
 					+ "1). Enter the inventory.\n"
 					+ "2). Enter a room to fight.\n"
-					+ "3). Enter the store.\n"
+					+ "3). Buy an Item from the store.\n"
 					+ "4). Exit.");
 			try{   
 				choice = kb.nextInt();
@@ -54,23 +54,19 @@ public class MainMenuGame {
 //----------------------------------------------------------------------------------------------------------------------------------
 	
 	private static void storeMenu() {
-		int choice = 0;
 		String name = "Avakiri Sword";
-		while(choice != 4){
-			System.out.println("Please enter the name of the item you would like to buy\n");
-			try{   		
-				name = kb.nextLine();
-		    }
-		    catch(Exception e){
-		    	System.out.println("Please enter a valid option");
-			}   
-			try{
-				choice = Integer.parseInt(name);
-			}
-			catch(Exception e){}
-			if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
-				System.out.println(name + " cannot be bought\n");
-			}
+		System.out.println("Please enter the name of the item you would like to buy\n");
+		try{   		
+			kb.nextLine();
+			name = kb.nextLine();
+	    }
+		catch(Exception e){
+		   	System.out.println("Please enter a valid option");
+		    System.out.println(name);
+		}   
+
+		if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
+			System.out.println(name + " cannot be bought\n");
 		}
 	}
 
