@@ -104,14 +104,13 @@ public class MainMenuGame {
 		int choice = 0;
 		String name = "";
 		Item item;
-		while(choice != 3)
+		while(choice != 4)
 		{
-			System.out.println("**Your Storage List**\n");
-    		StorageInventory.create().showStorage();
 			System.out.println("Please choose what you would like to do.\n"
-					+ "1). Get item from storage\n"
-					+ "2). Sell item from storage\n"
-					+ "3). Exit.");
+					+ "1). List everything in your inventory\n"
+					+ "2). Sell item from inventory\n"
+					+ "3). Equip Item from inventory **TODO:"
+					+ "4). Exit.");
 			try{   
 				choice = kb.nextInt();
 		    }
@@ -121,23 +120,21 @@ public class MainMenuGame {
 			switch(choice)
 		    {
 		    	case 1: 
-					System.out.println("Please enter what item you would like to get.\n");
-		    		name = kb.nextLine();
-		    		item = StorageInventory.create().getItemfromStorage(name);
-					if(item != null)
-						System.out.println("you just got "+ item + " from item list \n");
-					else
-						System.out.println("getting "+ item + " failed\n");
+					System.out.println("**Your Storage List**\n");
+		    		StorageInventory.create().showStorage();
 		    		break;
-		    	//TODO: Maybe equip the item right away?
 			    case 2:
-					System.out.println("Please enter what item you would like to get.\n");
+					System.out.println("Please enter what item you would like to sell\n");
+					kb.nextLine();
 		    		name = kb.nextLine();
 			    	if(StorageInventory.create().sellItemfromStorage(name)){
 						System.out.println("Sold "+ name + " successfully\n");
 					}else
 						System.out.println("sell "+name+" failed\n");
 			   		break;
+			    case 3:
+			    	
+			    	break;
 		    }
 		}
 	}
