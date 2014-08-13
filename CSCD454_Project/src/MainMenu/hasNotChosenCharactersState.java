@@ -1,7 +1,10 @@
 package MainMenu;
 
+import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.Scanner;
 
+import Items.characterSlots.HeroSlot;
 import character.Character;
 import character.CharacterFactory;
 
@@ -16,15 +19,35 @@ public class hasNotChosenCharactersState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void clickChooseCharacters(Scanner kb) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
 		//Method for choosing characters
 		System.out.println("Please input what type of heroes you would like to use one by one");
-		for(int heroes = 1; heroes < 4; heroes ++){
+		for(int heroes = 1; heroes < 4;){
 			try{
-				//TODO: Save heroes that come back
+				
+				//Get hero from character factory
 				Character character1 = CharacterFactory.getCharacter(kb.next());
+				
+				//Don't allow wrong spelling to make default character
+				if(character1.getDesc().equalsIgnoreCase("Default"))
+					throw new EmptyStackException();
+				
+				//create hero slot
+				MainMenuHeroSlot temp = new MainMenuHeroSlot();
+				
+				//add new hero to the hero slot
+				temp.SwapHero(character1);
+				
+				//add hero slot to the array list
+				heroies.add(temp);
+				
 				System.out.println("Character " + heroes + " picked");
-				System.out.println(character1.toString());
+				
+				//If passes test of "not default" then increment
+				heroes++;
+				
+				//Testing what was made
+				//System.out.println(character1.toString());
 			}catch(Exception e){
 				System.out.println("Failed to pick that hero, please try again.");
 			}

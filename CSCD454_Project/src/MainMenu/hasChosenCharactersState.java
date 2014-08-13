@@ -1,6 +1,9 @@
 package MainMenu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import Items.characterSlots.HeroSlot;
 
 /*
  * @author Anatoliy Kozlov
@@ -14,7 +17,7 @@ public class hasChosenCharactersState implements State {
     }
  
     //TODO: Maybe we should let him re-choose characters if he desires?
-	public void clickChooseCharacters(Scanner kb) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
 		System.out.println("You have already chosen your characters"); 
 		//gumballMachine.setState(gumballMachine.hasChosenCharactersState());
 	}

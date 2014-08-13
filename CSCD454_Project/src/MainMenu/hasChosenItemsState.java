@@ -1,6 +1,9 @@
 package MainMenu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import Items.characterSlots.HeroSlot;
 
 /*
  * @author Anatoliy Kozlov
@@ -13,7 +16,7 @@ public class hasChosenItemsState implements State {
 		this.gumballMachine = gumballMachine;
 	}
   
-	public void clickChooseCharacters(Scanner kb) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
 		System.out.println("You have already chosen characters to play with.");
 	}
  

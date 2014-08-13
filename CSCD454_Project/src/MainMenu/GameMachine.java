@@ -1,6 +1,9 @@
 package MainMenu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import Items.characterSlots.HeroSlot;
 
 /*
  * @author Anatoliy Kozlov
@@ -21,8 +24,8 @@ public class GameMachine {
 		this.state = hasNotChosenCharactersState;
 	}
  
-	public void clickChooseCharacters(Scanner scanchoice) {
-		state.clickChooseCharacters(scanchoice);
+	public void clickChooseCharacters(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+		state.clickChooseCharacters(scanchoice, heroies);
 	}
  
 	public void clickChooseItems() {

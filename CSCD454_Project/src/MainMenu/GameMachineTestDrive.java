@@ -1,16 +1,20 @@
 package MainMenu;
 
+import java.util.ArrayList;
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
 import java.util.Scanner;
 
+import Items.characterSlots.HeroSlot;
+
 public class GameMachineTestDrive {
 
 	public static void main(String[] args) {
 		GameMachine gameMachine = new GameMachine();
-
+		ArrayList<HeroSlot> heroies = new ArrayList<HeroSlot>();
+		
 		//System.out.println(gameMachine);
 		
 		Scanner scanchoice = new Scanner(System.in);
@@ -39,13 +43,21 @@ public class GameMachineTestDrive {
 		            gameMachine.clickTutorial();
 		            break;
 		        case 2: 
-		            gameMachine.clickChooseCharacters(scanchoice);
+		            gameMachine.clickChooseCharacters(scanchoice, heroies);
 		            break;
 		        case 3: 
 		            gameMachine.clickChooseItems();
 		            break;
 		        case 4: 
 		            gameMachine.clickPlayGame();
+		            break;
+		        case 99:
+		        	//for testing of the arraylist of heroes
+		        	for(int p = 0; p< heroies.size(); p++)
+		        	{
+		        		MainMenuHeroSlot temp = (MainMenuHeroSlot) heroies.get(p);
+		        		System.out.println(temp.getcharacter().toString());
+		        	}
 		            break;
 		    }   
 		} while (choiceentry != 5);
