@@ -70,7 +70,6 @@ public class hasChosenCharactersState implements State {
 			} while(choiceCount < 2);
 		gumballMachine.setState(gumballMachine.hasChosenItemsState());
 		}
-		
 	} // End clickChooseSkills
 	
 	private int validateSkill(String skillName, MainMenuHeroSlot temp) {	
