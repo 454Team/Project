@@ -22,8 +22,8 @@ public abstract class Character {
 	
 	private String desc;
 	
-	private int maxDmg = (int) this.strength;
-	private int minDmg = (int) (this.strength*.9);
+	private final int maxDmg = (int) this.strength;
+	private final int minDmg = (int) (this.strength*.9);
 	
 	private SkillsMain skill1;
 	private SkillsMain skill2;
@@ -46,7 +46,7 @@ public abstract class Character {
 		this.setVitality(50.0);
 		this.setDesc("Default");
 		this.setCap(10);
-		this.isDefendingNow = false;
+		this.setDefendingNow(false);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -64,7 +64,7 @@ public abstract class Character {
 		this.setVitality(vitality);
 		this.setDesc(desc);
 		this.setCap(10);
-		this.isDefendingNow = false;
+		this.setDefendingNow(false);
 	} // End EVC
 	
 	public int fight() {
@@ -82,26 +82,10 @@ public abstract class Character {
 	public void specialAttack3() {
 		skill3.attack();
 	}
-
-	public void setSkill2(SkillsMain skill2) {
-		this.skill2 = skill2;
-	}
-	
-	public void setSkill1(SkillsMain skill1) {
-		this.skill1 = skill1;
-	}
-	
-	public void setSkill3(SkillsMain skill3) {
-		this.skill3 = skill3;
-	}
-	
-	public boolean isDefending() {
-		return isDefendingNow;
-	}
 	
 	public void defend() {
 		if(random.nextInt(100) < this.dexterity)
-			this.isDefendingNow = true;
+			this.setDefendingNow(true);
 	} // End defend
 	
 	//TODO: check cap multiplication
@@ -129,6 +113,31 @@ public abstract class Character {
 	}
 	
 	//Status Setters and Getters
+	
+	public void setSkill2(SkillsMain skill2) {
+		this.skill2 = skill2;
+	}
+	
+	public void setSkill1(SkillsMain skill1) {
+		this.skill1 = skill1;
+	}
+	
+	public void setSkill3(SkillsMain skill3) {
+		this.skill3 = skill3;
+	}
+	
+	public boolean isDefendingNow() {
+		return isDefendingNow;
+	}
+
+	public void setDefendingNow(boolean isDefendingNow) {
+		this.isDefendingNow = isDefendingNow;
+	}
+
+	public boolean isDefending() {
+		return this.isDefendingNow;
+	}
+	
 	public double getStrength() {
 		return strength;
 	}

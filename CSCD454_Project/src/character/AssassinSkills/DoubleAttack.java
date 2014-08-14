@@ -1,5 +1,7 @@
 package character.AssassinSkills;
 
+import character.Assassin;
+
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
