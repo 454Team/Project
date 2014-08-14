@@ -3,6 +3,7 @@ package FightingBattle.HeroSlots;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
 import java.util.Stack;
 
 import Items.Constants.Constants;
@@ -87,10 +88,24 @@ public class Battlefield {
 						numHero--;
 						
 					}else{
-						System.out.println("hero attack with" + hero.normalAttack() + " damages");
-						monster.loseHealth(hero.normalAttack());				// monster attack if alive , ask users here
-						System.out.println(" monster " + monster.toString());
-						heroTurn.add(hero);
+						
+						Random randomGenerator = new Random();
+					    
+						
+						int number = randomGenerator.nextInt(100);
+						
+					    if(number >60){
+					    	int specialdamage = hero.specialAttack();
+					    	System.out.println("hero special attack with " + specialdamage + " damages");
+							monster.loseHealth(specialdamage);				// monster attack if alive , ask users here
+							System.out.println(" monster " + monster.toString());
+							heroTurn.add(hero);
+					    }else{
+							System.out.println("hero attack with " + hero.normalAttack() + " damages");
+							monster.loseHealth(hero.normalAttack());				// monster attack if alive , ask users here
+							System.out.println(" monster " + monster.toString());
+							heroTurn.add(hero);
+					    }
 					}
 				
 				if(monster.checkDefeated() == true){

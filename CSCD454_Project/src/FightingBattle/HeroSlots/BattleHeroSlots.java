@@ -45,8 +45,8 @@ public class BattleHeroSlots extends HeroSlot{
 	public double normalAttack() {
 		 return weaponSlot.increaseDamage((double)hero.fight());
 	}
-	public void specialAttack(){
-		hero.specialAttack2();
+	public int specialAttack(){
+		return hero.specialAttack();
 	}
 	
 	public void setExp(){

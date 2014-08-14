@@ -56,7 +56,6 @@ public class StorageTester {
 		ArrayList<Monster> monsters = new ArrayList<Monster>();
 		for(int i = 0 ; i < numberOfHero ; i++){
 			heroies.add(new MainMenuHeroSlot());
-			
 		}
 		
 		/*for(HeroSlot heroslot : heroies){
@@ -74,6 +73,13 @@ public class StorageTester {
 		ItemStorageInventory.create().showStorage();
 		
 		
+		heroies = Battlefield.create().loadHero(heroies)
+							.loadMonster(MonsterFactory.getMonster(1, 3))
+							.fight();
+		
+		for(HeroSlot heroslot : heroies){
+			System.out.println(heroslot.toString());
+		}
 		
 	}
 	
