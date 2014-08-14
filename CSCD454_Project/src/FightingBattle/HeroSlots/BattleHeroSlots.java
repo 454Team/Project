@@ -48,4 +48,8 @@ public class BattleHeroSlots extends HeroSlot{
 	public void specialAttack(){
 		hero.specialAttack2();
 	}
+	
+	public void setExp(){
+		hero.setExperience(hero.getExperience() + 3);
+	}
 }
