@@ -164,6 +164,6 @@ public abstract class Monster {
 	
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#.##");
-		return this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + this.getStrength() + "dmg";
+		return this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + df.format(this.getStrength()) + "dmg";
 	}
 } // End Character

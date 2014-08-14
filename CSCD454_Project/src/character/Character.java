@@ -346,7 +346,7 @@ public abstract class Character {
 
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#.##");
-		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + this.getStrength() + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + df.format(this.getStrength()) + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
 	}
 
 	public boolean compareName(Character character){
