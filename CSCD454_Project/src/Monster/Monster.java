@@ -122,8 +122,7 @@ public abstract class Monster {
 	}
 
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.health <=0 ;
 	}
 
 

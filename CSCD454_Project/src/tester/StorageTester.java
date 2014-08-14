@@ -7,6 +7,7 @@ import character.CharacterFactory;
 
 import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
+import FightingBattle.HeroSlots.Battlefield;
 import Items.Constants.Constants;
 import Items.Inventory.CharacterStorageInventory;
 import Items.Inventory.ItemStorageInventory;
@@ -14,6 +15,8 @@ import Items.WeaponArmor.Item;
 import Items.characterSlots.HeroSlot;
 import Items.itemFactory.ItemFactory;
 import MainMenu.MainMenuHeroSlot;
+import Monster.Monster;
+import Monster.MonsterFactory;
 
 public class StorageTester {
 
@@ -50,8 +53,10 @@ public class StorageTester {
 		
 		int numberOfHero = 3;
 		ArrayList<MainMenuHeroSlot> heroies = new ArrayList<MainMenuHeroSlot>();
+		ArrayList<Monster> monsters = new ArrayList<Monster>();
 		for(int i = 0 ; i < numberOfHero ; i++){
 			heroies.add(new MainMenuHeroSlot());
+			monsters.add(MonsterFactory.getMonster(1));
 		}
 		
 		/*for(HeroSlot heroslot : heroies){
@@ -80,6 +85,14 @@ public class StorageTester {
 		for(HeroSlot heroslot : heroies){
 			System.out.println(heroslot.toString());
 		}
+		
+		for(Monster monster : monsters){
+			System.out.println(monster.toString());
+		}
+		
+		Battlefield.create().loadHero(heroies).loadMonster(monsters).fight();
+		
+		
 	}
 	
 	public static void sellItemTester(String name){

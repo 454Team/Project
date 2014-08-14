@@ -42,4 +42,9 @@ public class MonsterSlots {
 		return monster.isAlive();
 	}
 
+	@Override
+	public String toString(){
+		return monster.toString();
+	}
+	
 }
