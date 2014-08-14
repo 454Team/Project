@@ -71,9 +71,12 @@ public class StorageInventory implements BalanceAccess{
 		for(Item item : itemList){
 			if(item.compareName(neededItem)){				// right item
 				temp_item = item;
-				itemList.remove(item);
+				
 			}
 		}
+		
+		itemList.remove(temp_item);
+		
 		return temp_item;
 	}
 	
@@ -82,9 +85,11 @@ public class StorageInventory implements BalanceAccess{
 		for(Item item : itemList){
 			if(item.compareName(neededItem)){				// right item
 				temp_item = item;
-				itemList.remove(item);
+	
 			}
 		}
+		
+		itemList.remove(temp_item);
 		return temp_item;
 	}
 	

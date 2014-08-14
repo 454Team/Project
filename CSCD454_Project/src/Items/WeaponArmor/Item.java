@@ -1,6 +1,6 @@
 package Items.WeaponArmor;
 
-public class Item {
+public class Item{
 	protected String name;					/* name of weapon*/
 	protected double criticalPoint;			/* critical damage or defense*/
 	protected double criticalPercent;		/* percent to perform critical attack [0,100]*/	

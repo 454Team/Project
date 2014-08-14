@@ -14,14 +14,22 @@ public class WeaponSlots implements Slots {
 	
 	@Override
 	public Item swap(Item newItem) {
-		Item temp = weaponItem;
-			weaponItem = null;
-			weaponItem = (WeaponItem) newItem;
+		Item temp = null;
+		try{
+				temp = weaponItem;
+				//weaponItem = null;
+				weaponItem = (WeaponItem) newItem;
+				return temp;
+		}catch(Exception e){
+			weaponItem = (WeaponItem) temp;
+			temp= null;
+		}
 		return temp;	
 	}
 
+	@Override
 	public String toString(){
-		return "Character is holding " + this.weaponItem.toString()  + "\n"; 
+		return "" + this.weaponItem.toString(); 
 	}
 	
 	@Override

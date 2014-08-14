@@ -20,4 +20,12 @@ public abstract class HeroSlot {
 		bodyArmorSlot = new BodyArmorSlots();
 	}
 
+	@Override
+	public String toString(){
+		return 	"Hero : " + hero.toString() + "\n"+
+				"Weapon : " + weaponSlot.toString() + "\n"+ 
+				"head armor : " + headArmorSlot.toString() + "\n" + 
+				"Body armor : " + bodyArmorSlot.toString() + "\n";
+	}
+	
 }

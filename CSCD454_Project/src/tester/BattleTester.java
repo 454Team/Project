@@ -18,7 +18,15 @@ public class BattleTester {
 			heroies.add(new MainMenuHeroSlot());
 		}
 		
+		for(HeroSlot heroslot : heroies){
+			System.out.println(heroslot.toString());
+		}
 		
+		
+		
+		for(HeroSlot heroslot : heroies){
+			System.out.println(heroslot.toString());
+		}
 		
 		//Battlefield.create().loadHero(hero1, hero2, hero3)
 		//					.loadMonster(1)

@@ -7,6 +7,6 @@ public class BasicSword extends Sword {
 		this.name = Constants.BASIC_SWORD;
 		this.attackScore = 2;
 		this.attackSpeed = 2;
-		this.money = 50;
+		this.money = 0;
 	}
 }
