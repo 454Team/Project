@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.Scanner;
 
+import Items.Constants.Constants;
 import Items.characterSlots.HeroSlot;
 import character.Character;
 import character.CharacterFactory;
