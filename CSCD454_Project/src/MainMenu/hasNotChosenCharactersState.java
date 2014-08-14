@@ -20,7 +20,7 @@ public class hasNotChosenCharactersState implements State {
     }
     
 	//Method for choosing characters
-	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<MainMenuHeroSlot> heroies) {
 		
 		//Print out prompt
 		System.out.println("Please input what type of heroes you would like to use one by one");
@@ -62,7 +62,7 @@ public class hasNotChosenCharactersState implements State {
 		kb.nextLine();
 	}
  
-	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You can't choose items, you haven't got any characters to put items on.");
 	}
 
@@ -71,7 +71,7 @@ public class hasNotChosenCharactersState implements State {
 		//Plus more info on how the game is played in itself
 	}
  
-	public void clickPlayGame() {
+	public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You don't have any characters to play with yet.");
 	}
  

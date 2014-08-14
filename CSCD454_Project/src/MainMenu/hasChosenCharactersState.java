@@ -19,7 +19,7 @@ public class hasChosenCharactersState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You have already chosen your characters"); 
 	}
  
@@ -27,7 +27,7 @@ public class hasChosenCharactersState implements State {
 		System.out.println("You have chosen your characters so please equip him with items next.");
 	 }
  
-	public void clickPlayGame() {
+	public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You need to set the character skills first.");
 	} 
  
@@ -35,7 +35,7 @@ public class hasChosenCharactersState implements State {
 		return "waiting for items to be chosen";
 	}
 
-	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		for(int i = 0; i < heroies.size(); i++)
 		{
 			int chosen = 0;

@@ -16,11 +16,11 @@ public class hasChosenItemsState implements State {
 		this.gumballMachine = gumballMachine;
 	}
   
-	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You have already chosen characters to play with.");
 	}
  
-	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You have already chosen items to use.");
 	}
 	
@@ -29,9 +29,9 @@ public class hasChosenItemsState implements State {
 		//TODO: Maybe add instructions of how the game will be played, how to move, what will happen, etc.?
 	}
 
-    public void clickPlayGame() {
+    public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies) {
     	//Initializes main menu for game play
-    	MainMenuGame.MainMenuGame.main(new String [0]);
+    	MainMenuGame.MainMenuGame.main(new String [0], heroies);
     	//Once game is played reset the game so he can play again
 		gumballMachine.setState(gumballMachine.hasNotChosenCharactersState());
     	}
