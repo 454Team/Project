@@ -28,8 +28,9 @@ public class WeaponSlots implements Slots {
 		}catch(Exception e){
 			weaponItem = (WeaponItem) temp;
 			temp= null;
+			return newItem;
 		}
-		return temp;	
+		//return temp;	
 	}
 
 	@Override

@@ -65,7 +65,7 @@ public class StorageTester {
 		
 		addItemTester( heroies.get(0).SwapWeapon(getItemTester(Constants.AKAVIRI_SWORD)) );
 		addItemTester( heroies.get(0).SwapHeadArmor(getItemTester(Constants.ANGEL_HEAD_ARMOR)) );
-		addItemTester( heroies.get(0).SwapBodyArmor(getItemTester(Constants.ANGEL_BODY_ARMOR)) );
+		addItemTester( heroies.get(0).SwapHeadArmor(getItemTester(Constants.ANGEL_BODY_ARMOR)) );
 		for(HeroSlot heroslot : heroies){
 			System.out.println(heroslot.toString());
 		}
@@ -73,26 +73,6 @@ public class StorageTester {
 		// show 
 		ItemStorageInventory.create().showStorage();
 		
-		
-		CharacterStorageInventory.create().addCharacter(CharacterFactory.create().buyCharacter(Constants.CHARACTER_PALADIN));
-		CharacterStorageInventory.create().addCharacter(CharacterFactory.create().buyCharacter(Constants.CHARACTER_ROGUE));
-		
-		CharacterStorageInventory.create().showStorage();
-		
-		CharacterStorageInventory.create().addCharacter(heroies.get(0).SwapHero(CharacterStorageInventory.create().getCharacterfromStorage(Constants.CHARACTER_PALADIN)));
-		
-		CharacterStorageInventory.create().showStorage();
-		for(HeroSlot heroslot : heroies){
-			System.out.println(heroslot.toString());
-		}
-		
-		for(Monster monster : monsters){
-			System.out.println(monster.toString());
-		}
-		
-		Battlefield.create().loadHero(heroies)
-					.loadMonster(MonsterFactory.getMonster(1, Constants.MONSTER_TEAM_NUMBER))
-					.fight();
 		
 		
 	}
