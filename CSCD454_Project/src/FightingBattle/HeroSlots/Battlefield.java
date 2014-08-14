@@ -70,7 +70,7 @@ public class Battlefield {
 				
 				hero= heroTurn.remove();
 				System.out.println("monster attack with 25 damages");
-				hero.loseHealth(25);
+				hero.loseHealth(25);  
 				
 				System.out.println(" hero " + hero.toString() );
 				
