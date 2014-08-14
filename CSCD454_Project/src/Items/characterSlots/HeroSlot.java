@@ -28,4 +28,20 @@ public abstract class HeroSlot {
 				//"Body armor : " + bodyArmorSlot.toString() + "\n";
 	}
 	
+	public Character getcharacter(){
+		return hero;
+	}
+	
+	public WeaponSlots getWeaponSlot(){
+		return weaponSlot;
+	}
+	
+	public BodyArmorSlots getBodyArmorSlots(){
+		return bodyArmorSlot;
+	}
+	
+	public HeadArmorSlots getHeadArmorSlots(){
+		return headArmorSlot;
+	}
+	
 }
