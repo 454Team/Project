@@ -105,7 +105,10 @@ public abstract class Character {
 	public int fight() {
 		int damage = random.nextInt(maxDmg - minDmg) + minDmg;
 		if(random.nextInt(100) < this.luck)
+		{
+			System.out.println("Critical Attack!");
 			return (int) damage * 2;
+		}
 		return damage;
 	}
 	
