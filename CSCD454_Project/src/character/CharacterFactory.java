@@ -20,7 +20,7 @@ public class CharacterFactory {
 			return new Priest();
 		case "Paladin":
 			return new Paladin();
-		case "Mage":
+		case "Sorcerer":
 			return new Sorcerer();
 		default:
 			return new DefaultCharacter();

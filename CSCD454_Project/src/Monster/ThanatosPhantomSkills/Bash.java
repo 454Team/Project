@@ -15,4 +15,8 @@ public class Bash implements ThanatosPhantomSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Bash";
+	}
 }

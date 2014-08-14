@@ -12,4 +12,8 @@ public class SilenceAttack implements GopinichSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SilenceAttack";
+	}
 }

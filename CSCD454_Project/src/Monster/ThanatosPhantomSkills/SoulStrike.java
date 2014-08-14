@@ -12,4 +12,8 @@ public class SoulStrike implements ThanatosPhantomSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SoulStrike";
+	}
 }

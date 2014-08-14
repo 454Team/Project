@@ -15,4 +15,8 @@ public class FrostDiver implements DarkSnakeLordSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "FrostDiver";
+	}
 }

@@ -15,4 +15,8 @@ public class Earthquake implements IfritSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "EarthQuake";
+	}
 }

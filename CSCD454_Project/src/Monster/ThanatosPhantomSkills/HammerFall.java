@@ -15,4 +15,8 @@ public class HammerFall implements ThanatosPhantomSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "HammerFall";
+	}
 }

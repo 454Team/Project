@@ -15,4 +15,8 @@ public class PulseStrike implements IfritSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "PulseStrike";
+	}
 }

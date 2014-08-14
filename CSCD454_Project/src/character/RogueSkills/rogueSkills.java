@@ -9,4 +9,5 @@ import character.SkillsMain;
  */
 public interface rogueSkills extends SkillsMain {
 	public int attack();
+	public String getDesc();
 }

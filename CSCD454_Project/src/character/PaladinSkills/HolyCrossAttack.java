@@ -12,4 +12,9 @@ public class HolyCrossAttack implements paladinSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "HolyCrossAttack";
+	}
+
 }

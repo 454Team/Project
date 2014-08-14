@@ -20,7 +20,7 @@ public class hasChosenItemsState implements State {
 		System.out.println("You have already chosen characters to play with.");
 	}
  
-	public void clickChooseItems() {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
 		System.out.println("You have already chosen items to use.");
 	}
 	

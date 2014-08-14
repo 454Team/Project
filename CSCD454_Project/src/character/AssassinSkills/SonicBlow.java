@@ -15,4 +15,9 @@ public class SonicBlow implements assassinSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SonicBlow";
+	}
+
 }

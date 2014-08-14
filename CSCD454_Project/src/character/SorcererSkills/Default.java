@@ -15,4 +15,8 @@ public class Default implements SorcererSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

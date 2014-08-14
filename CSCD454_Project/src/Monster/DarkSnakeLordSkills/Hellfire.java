@@ -15,4 +15,8 @@ public class Hellfire implements DarkSnakeLordSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "HellFire";
+	}
 }

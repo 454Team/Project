@@ -12,4 +12,8 @@ public class Sanctuary implements priestSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Sanctuary";
+	}
 }

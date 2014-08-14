@@ -12,4 +12,8 @@ public class Intimidate implements rogueSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Intimidate";
+	}
 }

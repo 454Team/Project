@@ -15,4 +15,8 @@ public class Default implements rogueSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

@@ -15,4 +15,9 @@ public class Sacrifice implements paladinSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Sacrifice";
+	}
+
 }

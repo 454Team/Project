@@ -12,4 +12,8 @@ public class SonicBlow implements IfritSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SonicBlow";
+	}
 }

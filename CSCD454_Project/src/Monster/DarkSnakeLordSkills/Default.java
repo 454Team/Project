@@ -12,4 +12,8 @@ public class Default implements DarkSnakeLordSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

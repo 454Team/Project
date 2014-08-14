@@ -12,4 +12,8 @@ public class Default implements OrcHeroSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

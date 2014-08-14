@@ -11,8 +11,12 @@ public class Heal implements priestSkills {
 
 	@Override
 	public int attack() {
-		System.out.println("I just healed all my teammates!");
+		System.out.println("I just all my teammates!");
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Heal";
+	}
 }

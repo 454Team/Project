@@ -15,4 +15,8 @@ public class Resurrection implements priestSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Resurrection";
+	}
 }

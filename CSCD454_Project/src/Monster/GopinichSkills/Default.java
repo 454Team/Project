@@ -12,4 +12,8 @@ public class Default implements GopinichSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

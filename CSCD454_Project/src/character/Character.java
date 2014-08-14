@@ -125,7 +125,53 @@ public abstract class Character {
 	public void setSkill3(SkillsMain skill3) {
 		this.skill3 = skill3;
 	}
+	public boolean setSkill1(String skill1) {
+		try{
+			for(int p = 0; p < this.getSkillNames().length; p++){
+				
+				if(this.getSkillNames()[p].getDesc().equalsIgnoreCase(skill1)){
+					this.skill1 = this.getSkillNames()[p];
+					return true;
+				}
+			}
+		}catch(Exception e){
+			System.out.println("Failed to pick that skill, please try again.");
+			return false;
+		}
+		System.out.println("Failed to pick that skill, please try again.");
+		return false;
+	}
 	
+	public boolean setSkill2(String skill2) {
+		try{
+			for(int p = 0; p < this.getSkillNames().length; p++){
+				
+				if(this.getSkillNames()[p].getDesc().equalsIgnoreCase(skill2))
+					this.skill1 = this.getSkillNames()[p];
+					
+			}
+		}catch(Exception e){
+			System.out.println("Failed to pick that skill, please try again.");
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean setSkill3(String skill3) {
+		try{
+			for(int p = 0; p < this.getSkillNames().length; p++){
+				
+				if(this.getSkillNames()[p].getDesc().equalsIgnoreCase(skill3))
+					this.skill1 = this.getSkillNames()[p];
+					
+			}
+		}catch(Exception e){
+			System.out.println("Failed to pick that skill, please try again.");
+			return false;
+		}
+		return true;
+	}
+		
 	public boolean isDefendingNow() {
 		return isDefendingNow;
 	}
@@ -209,6 +255,8 @@ public abstract class Character {
 	public void setCap(long cap) {
 		this.cap = cap;
 	}
+
+	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
 		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.getStrength() + "dmg";

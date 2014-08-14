@@ -15,4 +15,8 @@ public class EarthSpike implements SorcererSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "EarthSpike";
+	}
 }

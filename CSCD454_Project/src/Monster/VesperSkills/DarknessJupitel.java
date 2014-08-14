@@ -12,4 +12,8 @@ public class DarknessJupitel implements VesperSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "DarknessJupitel";
+	}
 }

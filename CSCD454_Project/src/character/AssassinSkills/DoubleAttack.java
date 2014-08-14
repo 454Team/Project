@@ -1,7 +1,5 @@
 package character.AssassinSkills;
 
-import character.Assassin;
-
 /*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
@@ -12,6 +10,11 @@ public class DoubleAttack implements assassinSkills{
 	public int attack() {
 		System.out.println("I just did the attack twice!");
 		return 0;
+	}
+
+	@Override
+	public String getDesc() {
+		return "DoubleAttack";
 	}
 
 }

@@ -8,4 +8,5 @@ import character.SkillsMain;
  */
 public interface SorcererSkills extends SkillsMain {
 	public int attack();
+	public String getDesc();
 }

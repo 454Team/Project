@@ -15,4 +15,8 @@ public class BackStab implements rogueSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "BackStab";
+	}
 }

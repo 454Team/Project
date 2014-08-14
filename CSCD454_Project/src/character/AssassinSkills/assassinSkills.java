@@ -8,4 +8,5 @@ import character.SkillsMain;
  */
 public interface assassinSkills extends SkillsMain {
 	public int attack();
+	public String getDesc();
 }

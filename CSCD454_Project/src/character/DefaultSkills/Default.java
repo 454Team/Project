@@ -15,4 +15,9 @@ public class Default implements defaultSkills {
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
+
 }

@@ -15,4 +15,8 @@ public class SpiralPierce implements OrcHeroSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SpiralPierce";
+	}
 }

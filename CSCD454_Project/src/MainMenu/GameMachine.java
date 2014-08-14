@@ -28,8 +28,8 @@ public class GameMachine {
 		state.clickChooseCharacters(scanchoice, heroies);
 	}
  
-	public void clickChooseItems() {
-		state.clickChooseItems();
+	public void clickChooseCharacterSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+		state.clickChooseSkills(scanchoice, heroies);
 	}
  
 	public void clickTutorial() {

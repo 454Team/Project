@@ -25,7 +25,7 @@ public class GameMachineTestDrive {
 			System.out.println("Please press: "
 					+ "\n1). Display the hint of what you need to do at the given moment"
 					+ "\n2). Choose characters that you would like to play with"
-					+ "\n3). Choose items that you would like to equip your character with"
+					+ "\n3). Choose the characters skills"
 					+ "\n4). Play the game!"
 					+ "\n5). Exit the program.");	  
 			//For Testing purposes
@@ -46,7 +46,7 @@ public class GameMachineTestDrive {
 		            gameMachine.clickChooseCharacters(scanchoice, heroies);
 		            break;
 		        case 3: 
-		            gameMachine.clickChooseItems();
+		            gameMachine.clickChooseCharacterSkills(scanchoice, heroies);
 		            break;
 		        case 4: 
 		            gameMachine.clickPlayGame();

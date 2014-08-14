@@ -15,4 +15,8 @@ public class SoulBurn implements SorcererSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "SoulBurn";
+	}
 }

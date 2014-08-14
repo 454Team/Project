@@ -15,4 +15,8 @@ public class MeteorStorm implements GopinichSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "MeteorStorm";
+	}
 }

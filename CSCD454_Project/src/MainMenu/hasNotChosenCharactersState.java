@@ -18,10 +18,16 @@ public class hasNotChosenCharactersState implements State {
     public hasNotChosenCharactersState(GameMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
- 
+    
+	//Method for choosing characters
 	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
-		//Method for choosing characters
+		
+		//Print out prompt
 		System.out.println("Please input what type of heroes you would like to use one by one");
+		for(int i = 0; i < Constants.heroNames.length; i++)
+			System.out.println(" - " + Constants.heroNames[i]);
+		
+		//Pick 3 characters
 		for(int heroes = 1; heroes < 4;){
 			try{
 				
@@ -56,10 +62,10 @@ public class hasNotChosenCharactersState implements State {
 		kb.nextLine();
 	}
  
-	public void clickChooseItems() {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
 		System.out.println("You can't choose items, you haven't got any characters to put items on.");
 	}
- 
+
 	public void clickTutorial() {
 		System.out.println("Please choose characters that you would like to play with in this game.");
 		//Plus more info on how the game is played in itself

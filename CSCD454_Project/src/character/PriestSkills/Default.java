@@ -15,4 +15,8 @@ public class Default implements priestSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Default";
+	}
 }

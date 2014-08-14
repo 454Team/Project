@@ -1,5 +1,6 @@
 package character;
 
+import MainMenu.Constants;
 import character.PriestSkills.*;
 
 /*
@@ -19,26 +20,21 @@ public class Priest extends Character {
 
 	@Override
 	public void specialAttack() {
-		super.specialAttack();	
-	}
-	
-	@Override
-	public void specialAttack2() {
-		super.specialAttack2();	
-	}
-	
-	@Override
-	public void specialAttack3() {
-		super.specialAttack3();	
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public boolean isAlive() {
-		return super.isAlive();
+		return super.getVitality() > 0;
 	}
-	
-	@Override
+
 	public String toString() {
 		return super.toString();
+	}
+
+	@Override
+	public SkillsMain[] getSkillNames() {
+		return Constants.priestSkillSkills;
 	}
 } // End Priest

@@ -15,4 +15,9 @@ public class Gospel implements paladinSkills{
 		return 0;
 	}
 
+	@Override
+	public String getDesc() {
+		return "Gospel";
+	}
+
 }
