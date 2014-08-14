@@ -2,8 +2,7 @@ package character;
 
 import java.util.Random;
 
-import Items.WeaponArmor.Item;
-import character.DefaultSkills.*;
+import character.DefaultSkills.Default;
 
 /*
  * @author Kevin Borling
@@ -27,8 +26,8 @@ public abstract class Character {
 	
 	private String desc;
 	
-	private final int maxDmg = (int) this.strength;
-	private final int minDmg = (int) (this.strength*.975);
+	private int maxDmg = (int) this.strength;
+	private int minDmg = 1;
 	
 	private SkillsMain skill1;
 	private SkillsMain skill2;
@@ -55,7 +54,7 @@ public abstract class Character {
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -77,7 +76,7 @@ public abstract class Character {
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End EVC
 	
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc,double sellMoney,double backMoney) {
@@ -99,7 +98,7 @@ public abstract class Character {
 		this.setMoney(sellMoney);
 		this.setBuyBackMoney(backMoney);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End EVC
 	
 	public int fight() {
@@ -132,10 +131,15 @@ public abstract class Character {
 	public void defend(double damage) {
 		if(random.nextInt(100) < this.dexterity)
 			this.setDefendingNow(true);
-		this.health -=damage;
 		if(this.health <0)
 			this.health = 0;
 	} // End defend
+	
+	public void applyDamage(double damage) {
+		this.health -= damage;
+		if(this.health <0)
+			this.health = 0;
+	}
 	
 	//TODO: check cap multiplication
 	public boolean levelUp() {
