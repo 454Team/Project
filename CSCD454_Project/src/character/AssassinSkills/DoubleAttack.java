@@ -7,7 +7,7 @@ package character.AssassinSkills;
 public class DoubleAttack implements assassinSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just did the attack twice!");
 		return 0;
 	}

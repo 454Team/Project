@@ -10,7 +10,7 @@ package Monster.GopinichSkills;
 public class FireBall implements GopinichSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just threw a fire ball!");
 		return 0;
 	}

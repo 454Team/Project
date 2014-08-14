@@ -10,7 +10,7 @@ package character.AssassinSkills;
 public class SonicBlow implements assassinSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just did a sonic blow!");
 		return 0;
 	}

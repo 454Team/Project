@@ -10,7 +10,7 @@ package character.PaladinSkills;
 public class Sacrifice implements paladinSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just sacrifized some of my life to do a major attack!");
 		return 0;
 	}

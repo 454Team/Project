@@ -7,7 +7,7 @@ package character.PaladinSkills;
 public class HolyCrossAttack implements paladinSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just did the holy cross attack!");
 		return 0;
 	}

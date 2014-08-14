@@ -10,7 +10,7 @@ package Monster.GopinichSkills;
 public class MeteorStorm implements GopinichSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just cast a storm of meteorites!");
 		return 0;
 	}

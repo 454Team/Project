@@ -10,7 +10,7 @@ package Monster.VesperSkills;
 public class BrandishSpear implements VesperSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just threw a brandish spear!");
 		return 0;
 	}

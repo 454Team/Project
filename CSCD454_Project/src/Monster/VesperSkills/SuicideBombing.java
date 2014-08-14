@@ -10,7 +10,7 @@ package Monster.VesperSkills;
 public class SuicideBombing implements VesperSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just did a suicide bombing!");
 		return 0;
 	}

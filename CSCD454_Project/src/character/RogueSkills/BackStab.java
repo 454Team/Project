@@ -10,7 +10,7 @@ package character.RogueSkills;
 public class BackStab implements rogueSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just stabbed the enemy in the back!");
 		return 0;
 	}

@@ -7,7 +7,7 @@ package character.PriestSkills;
 public class Sanctuary implements priestSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just just created a sanctuary boosting my teammates stats!");
 		return 0;
 	}

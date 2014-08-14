@@ -10,7 +10,7 @@ package character.RogueSkills;
 public class DeadlyInfect implements rogueSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just infected the enemy!");
 		return 0;
 	}

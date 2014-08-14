@@ -7,7 +7,7 @@ package Monster.GopinichSkills;
 public class SilenceAttack implements GopinichSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just did a silenced attack!");
 		return 0;
 	}

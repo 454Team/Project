@@ -7,7 +7,7 @@ package Monster.DarkSnakeLordSkills;
 public class DarkBreath implements DarkSnakeLordSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I just breathed darkness!");
 		return 0;
 	}
