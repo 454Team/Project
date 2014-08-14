@@ -133,13 +133,13 @@ public abstract class Character {
 		if(random.nextInt(100) < this.dexterity)
 			this.setDefendingNow(true);
 		if(this.health <0)
-			this.health = 0;
+			this.setHealth(0);
 	} // End defend
 	
 	public void applyDamage(double damage) {
 		this.health -= damage;
-		if(this.health <0)
-			this.health = 0;
+		if(this.health < 0)
+			this.setHealth(0);
 	}
 	
 	//TODO: check cap multiplication
@@ -164,7 +164,7 @@ public abstract class Character {
 	}
 
 	public boolean isAlive() {
-		return this.health <= 0;
+		return this.getHealth() <= 0;
 	}
 	
 	//Status Setters and Getters
