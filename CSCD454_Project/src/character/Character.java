@@ -95,7 +95,10 @@ public abstract class Character {
 	} // End EVC
 	
 	public int fight() {
-		return random.nextInt(maxDmg - minDmg) + minDmg;
+		int damage = random.nextInt(maxDmg - minDmg) + minDmg;
+		if(random.nextInt(100) < this.luck)
+			return (int) (damage * (100 - this.luck));
+		return damage;
 	}
 	
 	public void specialAttack() {
@@ -306,7 +309,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.getStrength() + "dmg";
+		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.maxDmg + "dmg";
 	}
 
 	public boolean compareName(Character character){
