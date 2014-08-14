@@ -16,17 +16,19 @@ public abstract class Character {
 	private double intelligence;
 	private double vitality;
 	private double luck;
+	private double health;
 	private double dexterity;
 	private long experience;
 	private long cap;
 	private boolean isDefendingNow;
 	private double money;
 	private double buyBackMoney;
+	private int level;
 	
 	private String desc;
 	
 	private final int maxDmg = (int) this.strength;
-	private final int minDmg = (int) (this.strength*.9);
+	private final int minDmg = (int) (this.strength*.975);
 	
 	private SkillsMain skill1;
 	private SkillsMain skill2;
@@ -52,6 +54,8 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setLevel(1);
+		this.setHealth(this.vitality);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -72,6 +76,8 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setLevel(1);
+		this.setHealth(this.vitality);
 	} // End EVC
 	
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc,double sellMoney,double backMoney) {
@@ -92,10 +98,15 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(sellMoney);
 		this.setBuyBackMoney(backMoney);
+		this.setLevel(1);
+		this.setHealth(this.vitality);
 	} // End EVC
 	
 	public int fight() {
-		return random.nextInt(maxDmg - minDmg) + minDmg;
+		int damage = random.nextInt(maxDmg - minDmg) + minDmg;
+		if(random.nextInt(100) < this.luck)
+			return (int) damage * 2;
+		return damage;
 	}
 	
 	public void specialAttack() {
@@ -120,6 +131,7 @@ public abstract class Character {
 		if(this.experience >= this.cap)
 		{
 			this.setCap(this.cap * 2);
+			this.setLevel(this.level++);
 			addStats();
 			return true;
 		}
@@ -136,7 +148,7 @@ public abstract class Character {
 	}
 
 	public boolean isAlive() {
-		return this.vitality > 0;
+		return this.health > 0;
 	}
 	
 	//Status Setters and Getters
@@ -267,6 +279,17 @@ public abstract class Character {
 		this.experience = experience;
 	}
 
+	public double getHealth() {
+		return health;
+	}
+
+	public void setHealth(double health) {
+		if(health < 0)
+			this.health = 0;
+		else
+			this.health = health;
+	}
+	
 	public String getDesc() {
 		return desc;
 	}
@@ -306,7 +329,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.getStrength() + "dmg";
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
 	}
 
 	public boolean compareName(Character character){
@@ -315,5 +338,13 @@ public abstract class Character {
 	
 	public boolean compareName(String character){
 		return this.getDesc().equals(character);
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 } // End Character

@@ -21,9 +21,7 @@ public class CharacterFactory implements BalanceAccess{
 		return characterFactory;
 	}
 	
-	private CharacterFactory(){
-		
-	}
+	private CharacterFactory(){}
 	
 	/*
 	 * @param String includes the type of the chosen character.
