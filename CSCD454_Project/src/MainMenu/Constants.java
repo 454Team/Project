@@ -18,7 +18,7 @@ public class Constants {
 
 	public static final SkillsMain [] paladinSkillSkills =   {new Gospel(),new HolyCrossAttack(),new Sacrifice()};
 	public static final SkillsMain [] assassinSkillSkills =  {new DoubleAttack(),new SonicBlow(),new ThrowVenomKnife()};
-	public static final SkillsMain [] priestSkillSkills =    {new Heal(),new Resurrection(),new Sanctuary()};
+	public static final SkillsMain [] priestSkillSkills =    {new HolyHit(),new Compel(),new EternalFlame()};
 	public static final SkillsMain [] rogueSkillSkills =     {new BackStab(),new DeadlyInfect(),new Intimidate()};
 	public static final SkillsMain [] sorcererSkillSkills =  {new EarthSpike(),new MagicCrasher(),new SoulBurn()};	
 }	

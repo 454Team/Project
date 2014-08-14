@@ -1,7 +1,7 @@
 /**
  * 
  */
-package character.SorcererSkills;
+package character.PriestSkills;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ import java.util.Random;
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class EarthSpike implements SorcererSkills{
+public class HolyHit implements priestSkills {
 	
 	private final Random random = new Random();
 	
@@ -17,7 +17,7 @@ public class EarthSpike implements SorcererSkills{
 	public int attack(double agility, double luck) {
 		if(random.nextInt(100) < luck)
 		{
-			System.out.println("I just spiked the enemy with some earth!");
+			System.out.println("Holy Hit, I messed that monster up!");
 			return random.nextInt((int) agility) * 2;
 		}
 		return 0;
@@ -25,6 +25,6 @@ public class EarthSpike implements SorcererSkills{
 
 	@Override
 	public String getDesc() {
-		return "EarthSpike";
+		return "Heal";
 	}
 }

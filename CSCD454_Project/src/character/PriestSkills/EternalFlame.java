@@ -1,30 +1,27 @@
-/**
- * 
- */
-package character.SorcererSkills;
+package character.PriestSkills;
 
 import java.util.Random;
 
-/**
+/*
  * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class EarthSpike implements SorcererSkills{
-	
+public class EternalFlame implements priestSkills{
+
 	private final Random random = new Random();
 	
 	@Override
 	public int attack(double agility, double luck) {
 		if(random.nextInt(100) < luck)
 		{
-			System.out.println("I just spiked the enemy with some earth!");
-			return random.nextInt((int) agility) * 2;
+			System.out.println("I set the monster on fire!");
+			return random.nextInt((int) agility) * 4;
 		}
 		return 0;
 	}
 
 	@Override
 	public String getDesc() {
-		return "EarthSpike";
+		return "Sanctuary";
 	}
 }
