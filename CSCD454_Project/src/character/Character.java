@@ -155,11 +155,11 @@ public abstract class Character {
 	}
 	
 	private void addStats() {
-		this.setAgility(this.agility + 5);
-		this.setDexterity(this.dexterity + 5);
-		this.setIntelligence(this.intelligence + 5);
-		this.setStrength(this.strength + 5);
-		this.setVitality(this.vitality + 5);
+		this.setAgility(this.agility + 10);
+		this.setDexterity(this.dexterity + 10);
+		this.setIntelligence(this.intelligence + 10);
+		this.setStrength(this.strength + 10);
+		this.setVitality(this.vitality + 10);
 		this.setLuck(this.luck + 1);	
 	}
 

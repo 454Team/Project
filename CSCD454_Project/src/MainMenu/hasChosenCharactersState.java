@@ -33,7 +33,7 @@ public class hasChosenCharactersState implements State {
 	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		
 		String skillName = "";
-		int check;
+		int check = -1;
 		int choiceCount = 0;
 		
 		for(int i = 0; i < heroies.size(); i++)
