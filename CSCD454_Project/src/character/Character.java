@@ -18,8 +18,8 @@ public abstract class Character {
 	private double luck;
 	private double health;
 	private double dexterity;
-	private long experience;
-	private long cap;
+	private int experience;
+	private int cap;
 	private boolean isDefendingNow;
 	private double money;
 	private double buyBackMoney;
@@ -287,11 +287,11 @@ public abstract class Character {
 		this.luck = luck;
 	}
 
-	public long getExperience() {
+	public int getExperience() {
 		return experience;
 	}
 
-	public void setExperience(long experience) {
+	public void setExperience(int experience) {
 		this.experience = experience;
 	}
 
@@ -314,11 +314,11 @@ public abstract class Character {
 		this.desc = desc;
 	}
 	
-	public long getCap() {
+	public int getCap() {
 		return cap;
 	}
 
-	public void setCap(long cap) {
+	public void setCap(int cap) {
 		this.cap = cap;
 	}
 
