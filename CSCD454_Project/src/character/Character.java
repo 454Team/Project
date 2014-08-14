@@ -16,6 +16,7 @@ public abstract class Character {
 	private double intelligence;
 	private double vitality;
 	private double luck;
+	private double health;
 	private double dexterity;
 	private long experience;
 	private long cap;
@@ -52,6 +53,7 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setHealth(this.vitality);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -72,6 +74,7 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setHealth(this.vitality);
 	} // End EVC
 	
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc,double sellMoney,double backMoney) {
@@ -139,7 +142,7 @@ public abstract class Character {
 	}
 
 	public boolean isAlive() {
-		return this.vitality > 0;
+		return this.health > 0;
 	}
 	
 	//Status Setters and Getters
@@ -270,6 +273,14 @@ public abstract class Character {
 		this.experience = experience;
 	}
 
+	public double getHealth() {
+		return health;
+	}
+
+	public void setHealth(double health) {
+		this.health = health;
+	}
+	
 	public String getDesc() {
 		return desc;
 	}
@@ -309,7 +320,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.maxDmg + "dmg";
+		return this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
 	}
 
 	public boolean compareName(Character character){
