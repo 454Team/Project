@@ -17,11 +17,6 @@ public class Rogue extends Character {
 		return super.fight();
 	}
 
-	@Override
-	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
 /*
 	@Override
 	public boolean isAlive() {

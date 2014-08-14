@@ -18,11 +18,6 @@ public class Sorcerer extends Character {
 		return super.fight();
 	}
 
-	@Override
-	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
 /*
 	@Override
 	public boolean isAlive() {

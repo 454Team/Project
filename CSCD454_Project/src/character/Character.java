@@ -112,16 +112,16 @@ public abstract class Character {
 		return (int) this.strength;
 	}
 	
-	public void specialAttack() {
-		skill1.attack(this.getAgility(), this.getLuck());
+	public int specialAttack() {
+		return skill1.attack(this.getAgility(), this.getLuck());
 	}
 	
-	public void specialAttack2() {
-		skill2.attack(this.getAgility(), this.getLuck());
+	public int specialAttack2() {
+		return skill2.attack(this.getAgility(), this.getLuck());
 	}
 	
-	public void specialAttack3() {
-		skill3.attack(this.getAgility(), this.getLuck());
+	public int specialAttack3() {
+		return skill3.attack(this.getAgility(), this.getLuck());
 	}
 	
 	public void defend() {
