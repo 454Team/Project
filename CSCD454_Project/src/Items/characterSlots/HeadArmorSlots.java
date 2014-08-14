@@ -31,9 +31,9 @@ public class HeadArmorSlots implements Slots {
 			return temp;
 		}catch(Exception e){
 			armorItem = (HeadArmor) temp;
-			temp = null;
+			return newItem;
 		}
-		return temp;
+
 	}
 
 	@Override

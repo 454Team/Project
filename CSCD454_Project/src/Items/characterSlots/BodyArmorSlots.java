@@ -31,9 +31,9 @@ public class BodyArmorSlots implements Slots{
 			return temp;
 		}catch(Exception e){
 			armorItem = (BodyArmor) temp;			// swap fail, return to original
-			temp = null;
+			return newItem;
 		}
-		return temp;
+		
 	}
 
 	@Override

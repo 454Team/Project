@@ -75,7 +75,7 @@ public class Battlefield {
 				if(heroTurn.peek()!=null){
 					
 					hero= heroTurn.remove();
-					System.out.println("monster attack with 25 damages");
+					System.out.println("monster attack with "+ monster.attack() +" damages");
 					hero.loseHealth(monster.attack());  
 					
 					System.out.println(" hero " + hero.toString() );
