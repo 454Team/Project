@@ -55,10 +55,12 @@ public class hasChosenCharactersState implements State {
 			check = validateSkill(skillName, temp);
 			if(check != -1)
 				choiceCount++;
+			else
+				System.out.println("Please input valid skill name.");
 			if(choiceCount == 1)
 				temp.getcharacter().setSkill1(temp.getcharacter().getSkillNames()[check]);
 			if(choiceCount == 2)
-				temp.getcharacter().setSkill1(temp.getcharacter().getSkillNames()[check]);
+				temp.getcharacter().setSkill2(temp.getcharacter().getSkillNames()[check]);
 			} while(choiceCount < 2);
 		gumballMachine.setState(gumballMachine.hasChosenItemsState());
 		}

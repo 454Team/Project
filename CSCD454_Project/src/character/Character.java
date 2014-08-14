@@ -103,7 +103,7 @@ public abstract class Character {
 	} // End EVC
 	
 	public int fight() {
-		int damage = random.nextInt(maxDmg - minDmg) + minDmg;
+		int damage = random.nextInt(maxDmg - (minDmg + 1)) + minDmg;
 		if(random.nextInt(100) < this.luck)
 		{
 			System.out.println("Critical Attack!");
@@ -127,7 +127,7 @@ public abstract class Character {
 	public void defend() {
 		if(random.nextInt(100) < this.dexterity)
 			this.setDefendingNow(true);
-	} // End defend
+	} // End defend  
 	
 	public void defend(double damage) {
 		if(random.nextInt(100) < this.dexterity)
