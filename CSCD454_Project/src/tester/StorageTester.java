@@ -56,7 +56,7 @@ public class StorageTester {
 		ArrayList<Monster> monsters = new ArrayList<Monster>();
 		for(int i = 0 ; i < numberOfHero ; i++){
 			heroies.add(new MainMenuHeroSlot());
-			monsters.add(MonsterFactory.getMonster(1));
+			//monsters.add(MonsterFactory.getMonster(1));
 		}
 		
 		/*for(HeroSlot heroslot : heroies){

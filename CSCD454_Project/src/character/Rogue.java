@@ -1,6 +1,5 @@
 package character;
-
-import MainMenu.Constants;
+import Items.Constants.Constants;
 import character.RogueSkills.*;
 
 /*

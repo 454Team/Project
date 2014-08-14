@@ -1,6 +1,6 @@
 package character;
 
-import MainMenu.Constants;
+import Items.Constants.Constants;
 import character.PriestSkills.*;
 
 /*
@@ -10,7 +10,7 @@ import character.PriestSkills.*;
 public class Priest extends Character {
 
 	public Priest() {
-		super(new Heal(), new Resurrection(), new Sanctuary(), 10.0, 20.0, 70.0, 30.0, 30.0, 60.0, "Priest",400,200);
+		super(new HolyHit(), new Compel(), new EternalFlame(), 10.0, 20.0, 70.0, 30.0, 30.0, 60.0, "Priest",400,200);
 	} // End DVC
 	
 	@Override

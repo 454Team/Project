@@ -112,7 +112,7 @@ public abstract class Monster {
 	}
 
 	public void specialAttack() {
-		skill1.attack();		
+		skill1.attack(this.getAgility(), this.getLuck());	
 	}
 
 	public void defend() {
@@ -132,7 +132,7 @@ public abstract class Monster {
 
 
 	public void specialAttack2() {
-		skill2.attack();
+		skill2.attack(this.getAgility(), this.getLuck());
 	}
 	
 	public double getStrength() {

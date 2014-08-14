@@ -13,7 +13,7 @@ public class GameMachineTestDrive {
 
 	public static void main(String[] args) {
 		GameMachine gameMachine = new GameMachine();
-		ArrayList<HeroSlot> heroies = new ArrayList<HeroSlot>();
+		ArrayList<MainMenuHeroSlot> heroies = new ArrayList<MainMenuHeroSlot>();
 		
 		//System.out.println(gameMachine);
 		
@@ -49,7 +49,7 @@ public class GameMachineTestDrive {
 		            gameMachine.clickChooseCharacterSkills(scanchoice, heroies);
 		            break;
 		        case 4: 
-		            gameMachine.clickPlayGame();
+		            gameMachine.clickPlayGame(heroies);
 		            break;
 		        case 99:
 		        	//for testing of the arraylist of heroes

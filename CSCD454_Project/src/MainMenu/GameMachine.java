@@ -24,11 +24,11 @@ public class GameMachine {
 		this.state = hasNotChosenCharactersState;
 	}
  
-	public void clickChooseCharacters(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacters(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		state.clickChooseCharacters(scanchoice, heroies);
 	}
  
-	public void clickChooseCharacterSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacterSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
 		state.clickChooseSkills(scanchoice, heroies);
 	}
  
@@ -36,8 +36,8 @@ public class GameMachine {
 		state.clickTutorial();
 	}
 	
-	public void clickPlayGame() {
-		state.clickPlayGame();
+	public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies) {
+		state.clickPlayGame(heroies);
 	}
 
 	void setState(State state) {
@@ -66,4 +66,5 @@ public class GameMachine {
 		result.append("Game is in " + state + "\n");
 		return result.toString();
 	}
+
 }

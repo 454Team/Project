@@ -1,15 +1,15 @@
 /**
  * 
  */
-package Monster.ThanatosPhantomSkills;
+package character.PriestSkills;
 
 import java.util.Random;
 
 /**
- * @author Kevin Borling
+ * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class Bash implements ThanatosPhantomSkills{
+public class Compel implements priestSkills{
 
 	private final Random random = new Random();
 	
@@ -17,14 +17,14 @@ public class Bash implements ThanatosPhantomSkills{
 	public int attack(double agility, double luck) {
 		if(random.nextInt(100) < luck)
 		{
-			System.out.println("I just bashed the opponent!");
-			return random.nextInt((int) agility) * 2;
+			System.out.println("The power of Priest compells you!");
+			return random.nextInt((int) agility) * 3;
 		}
 		return 0;
 	}
 
 	@Override
 	public String getDesc() {
-		return "Bash";
+		return "Resurrection";
 	}
 }

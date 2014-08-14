@@ -11,7 +11,7 @@ public class MonsterSlots {
 	protected boolean isDefeated = false;
 	public MonsterSlots() {
 		//TODO: put in what room number to getMonster();
-		monster = MonsterFactory.getMonster(2);
+		//monster = MonsterFactory.getMonster(2);
 		isMonsterAvailable = true;
 		isDefeated = false;
 	}

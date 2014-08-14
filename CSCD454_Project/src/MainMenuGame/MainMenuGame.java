@@ -3,11 +3,17 @@
  */
 package MainMenuGame;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import FightingBattle.HeroSlots.Battlefield;
 import Items.Inventory.ItemStorageInventory;
 import Items.WeaponArmor.Item;
+import Items.characterSlots.HeroSlot;
 import Items.itemFactory.ItemFactory;
+import MainMenu.MainMenuHeroSlot;
+import Monster.Monster;
+import Monster.MonsterFactory;
 import tester.BattleTester;
 import tester.StorageTester;
 
@@ -17,11 +23,13 @@ import tester.StorageTester;
  */
 public class MainMenuGame {
 	public static Scanner kb = new Scanner(System.in);
+	public static ArrayList<MainMenuHeroSlot> heroSlots;
 
 //----------------------------------------------------------------------------------------------------------------------------------
 	
-	public static void main(String[] args) {
+	public static void main(String[] args, ArrayList<MainMenuHeroSlot> heroies) {
 		int choice = 0;
+		heroSlots = heroies;
 		while(choice != 4)
 		{
 			System.out.println("Please choose what you would like to do.\n"
@@ -81,21 +89,17 @@ public class MainMenuGame {
 					+ "Or please enter zero to go back to the main menu.\n");
 			try{   
 				choice = kb.nextInt();
+			    ArrayList<Monster> monsters = new ArrayList<Monster>();
+			    monsters = MonsterFactory.getMonster(choice,3);
+			    Battlefield.create();
+			    Battlefield.create().loadMonster(monsters);
+			    Battlefield.create().loadHero(heroSlots);
+			    Battlefield.create().fight();
+			    break;
 		    }
 		    catch(Exception e){
 		    	break;
 			}    	
-			//TODO: Need to finish rooms before doing this
-			switch(choice)
-		    {
-		    	case 1: 
-		    		
-		    		break;
-			   	//for testing
-		    	case 99:
-			   		BattleTester.main(new String[0]);
-			   		break;
-		    }
 		}		
 	}
 

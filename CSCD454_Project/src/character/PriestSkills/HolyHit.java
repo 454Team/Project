@@ -1,23 +1,23 @@
 /**
  * 
  */
-package Monster.ThanatosPhantomSkills;
+package character.PriestSkills;
 
 import java.util.Random;
 
 /**
- * @author Kevin Borling
+ * @author Anatoliy Kozlov
  * CSCD 454 | Design Patterns
  */
-public class Bash implements ThanatosPhantomSkills{
-
+public class HolyHit implements priestSkills {
+	
 	private final Random random = new Random();
 	
 	@Override
 	public int attack(double agility, double luck) {
 		if(random.nextInt(100) < luck)
 		{
-			System.out.println("I just bashed the opponent!");
+			System.out.println("Holy Hit, I messed that monster up!");
 			return random.nextInt((int) agility) * 2;
 		}
 		return 0;
@@ -25,6 +25,6 @@ public class Bash implements ThanatosPhantomSkills{
 
 	@Override
 	public String getDesc() {
-		return "Bash";
+		return "Heal";
 	}
 }

@@ -11,8 +11,8 @@ import Items.characterSlots.HeroSlot;
  */
 public interface State {
  
-	public void clickChooseCharacters(Scanner scanchoice, ArrayList<HeroSlot> heroies);
-	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies);
+	public void clickChooseCharacters(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies);
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies);
 	public void clickTutorial();
-	public void clickPlayGame();
+	public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies);
 }

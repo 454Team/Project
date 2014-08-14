@@ -1,12 +1,7 @@
 package MainMenu;
 
 import java.util.ArrayList;
-import java.util.EmptyStackException;
 import java.util.Scanner;
-
-import character.Character;
-import character.CharacterFactory;
-import Items.characterSlots.HeroSlot;
 
 /*
  * @author Anatoliy Kozlov
@@ -19,7 +14,7 @@ public class hasChosenCharactersState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void clickChooseCharacters(Scanner kb, ArrayList<HeroSlot> heroies) {
+	public void clickChooseCharacters(Scanner kb, ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You have already chosen your characters"); 
 	}
  
@@ -27,7 +22,7 @@ public class hasChosenCharactersState implements State {
 		System.out.println("You have chosen your characters so please equip him with items next.");
 	 }
  
-	public void clickPlayGame() {
+	public void clickPlayGame(ArrayList<MainMenuHeroSlot> heroies) {
 		System.out.println("You need to set the character skills first.");
 	} 
  
@@ -35,10 +30,14 @@ public class hasChosenCharactersState implements State {
 		return "waiting for items to be chosen";
 	}
 
-	public void clickChooseSkills(Scanner scanchoice, ArrayList<HeroSlot> heroies) {
+	public void clickChooseSkills(Scanner scanchoice, ArrayList<MainMenuHeroSlot> heroies) {
+		
+		String skillName = "";
+		int check;
+		int choiceCount = 0;
+		
 		for(int i = 0; i < heroies.size(); i++)
 		{
-			int chosen = 0;
 			//For specific hero in hero slot
 			MainMenuHeroSlot temp = (MainMenuHeroSlot) heroies.get(i);
 			
@@ -47,8 +46,30 @@ public class hasChosenCharactersState implements State {
 			for(int p = 0; p < temp.getcharacter().getSkillNames().length; p++){
 				System.out.println(temp.getcharacter().getSkillNames()[p].getDesc());
 			}
-			//TODO: Need to implement skill choosing.
-		}
+			do {
+			try {
+			skillName = scanchoice.next();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			check = validateSkill(skillName, temp);
+			if(check != -1)
+				choiceCount++;
+			if(choiceCount == 1)
+				temp.getcharacter().setSkill1(temp.getcharacter().getSkillNames()[check]);
+			if(choiceCount == 2)
+				temp.getcharacter().setSkill1(temp.getcharacter().getSkillNames()[check]);
+			} while(choiceCount < 2);
 		gumballMachine.setState(gumballMachine.hasChosenItemsState());
+		}
+		
+	} // End clickChooseSkills
+	
+	private int validateSkill(String skillName, MainMenuHeroSlot temp) {	
+		for(int p = 0; p < temp.getcharacter().getSkillNames().length; p++) {
+			if(temp.getcharacter().getSkillNames()[p].getDesc().equalsIgnoreCase(skillName))
+				return p;
+		} // End for
+		return -1;		
 	}
 }

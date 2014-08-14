@@ -10,7 +10,7 @@ package character.PriestSkills;
 public class Default implements priestSkills{
 
 	@Override
-	public int attack() {
+	public int attack(double agility, double luck) {
 		System.out.println("I tried to do a special attack but I haven't set it so I failed at this turn...");
 		return 0;
 	}

@@ -105,20 +105,23 @@ public abstract class Character {
 	public int fight() {
 		int damage = random.nextInt(maxDmg - minDmg) + minDmg;
 		if(random.nextInt(100) < this.luck)
+		{
+			System.out.println("Critical Attack!");
 			return (int) damage * 2;
+		}
 		return damage;
 	}
 	
 	public void specialAttack() {
-		skill1.attack();
+		skill1.attack(this.getAgility(), this.getLuck());
 	}
 	
 	public void specialAttack2() {
-		skill2.attack();
+		skill2.attack(this.getAgility(), this.getLuck());
 	}
 	
 	public void specialAttack3() {
-		skill3.attack();
+		skill3.attack(this.getAgility(), this.getLuck());
 	}
 	
 	public void defend() {
@@ -337,7 +340,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
 	}
 
 	public boolean compareName(Character character){

@@ -2,7 +2,7 @@ package character;
 
 import java.util.Random;
 
-import MainMenu.Constants;
+import Items.Constants.Constants;
 import character.PaladinSkills.*;
 
 /*

@@ -1,8 +1,40 @@
 package Items.Constants;
 
+import character.SkillsMain;
+import character.AssassinSkills.DoubleAttack;
+import character.AssassinSkills.SonicBlow;
+import character.AssassinSkills.ThrowVenomKnife;
+import character.PaladinSkills.Gospel;
+import character.PaladinSkills.HolyCrossAttack;
+import character.PaladinSkills.Sacrifice;
+import character.PriestSkills.Compel;
+import character.PriestSkills.EternalFlame;
+import character.PriestSkills.HolyHit;
+import character.RogueSkills.BackStab;
+import character.RogueSkills.DeadlyInfect;
+import character.RogueSkills.Intimidate;
+import character.SorcererSkills.EarthSpike;
+import character.SorcererSkills.MagicCrasher;
+import character.SorcererSkills.SoulBurn;
+
 public class Constants {
 	
 	public static final double initialBalance = 100000;
+	
+	public static final String [] heroNames =           {"Assassin","Paladin","Priest","Rogue","Sorcerer"};
+	public static final String [] paladinSkillNames =   {"Gospel","HolyCrossAttack","Sacrifice"};
+	public static final String [] assassinSkillNames  = {"DoubleAttack","SonicBlow","ThrowVenomKnife"};
+	public static final String [] priestSkillNames =    {"Heal","Resurrection","Sanctuary"};
+	public static final String [] rogueSkillNames =     {"BackStab","DeadlyInfect","Intimidate"};
+	public static final String [] sorcererSkillNames =  {"EarthSpike","MagicCrasher","SoulBurn"};
+
+	public static final SkillsMain [] paladinSkillSkills =   {new Gospel(),new HolyCrossAttack(),new Sacrifice()};
+	public static final SkillsMain [] assassinSkillSkills =  {new DoubleAttack(),new SonicBlow(),new ThrowVenomKnife()};
+	public static final SkillsMain [] priestSkillSkills =    {new HolyHit(),new Compel(),new EternalFlame()};
+	public static final SkillsMain [] rogueSkillSkills =     {new BackStab(),new DeadlyInfect(),new Intimidate()};
+	public static final SkillsMain [] sorcererSkillSkills =  {new EarthSpike(),new MagicCrasher(),new SoulBurn()};
+	
+	public static final String [] storeItemNames = {"Basic sword","Basic axes","Basic head armor","Basic body armor"};
 	
 	/*
 	 * basic names
@@ -73,9 +105,7 @@ public class Constants {
 	public static final String CHARACTER_PALADIN = "Paladin";
 	public static final String CHARACTER_SORCERER = "Sorcerer";
 	public static final String CHARACTER_DEFAULT = "random";
-	
-	
-	
+		
 	public static final int HERO_TEAM_NUMBER = 3;
 	public static final int MONSTER_TEAM_NUMBER = 3;
 	public static final int MONSTER_RANDOM = 100;

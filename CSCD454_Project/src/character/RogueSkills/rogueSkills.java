@@ -8,6 +8,6 @@ import character.SkillsMain;
  * CSCD 454 | Design Patterns
  */
 public interface rogueSkills extends SkillsMain {
-	public int attack();
+	public int attack(double agility, double luck);
 	public String getDesc();
 }

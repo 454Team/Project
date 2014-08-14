@@ -7,5 +7,5 @@ import character.SkillsMain;
  * CSCD 454 | Design Patterns
  */
 public interface GopinichSkills extends SkillsMain{
-	public int attack();
+	public int attack(double agility, double luck);
 }
