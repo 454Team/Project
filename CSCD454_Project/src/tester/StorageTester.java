@@ -56,7 +56,7 @@ public class StorageTester {
 		ArrayList<Monster> monsters = new ArrayList<Monster>();
 		for(int i = 0 ; i < numberOfHero ; i++){
 			heroies.add(new MainMenuHeroSlot());
-			//monsters.add(MonsterFactory.getMonster(1));
+			
 		}
 		
 		/*for(HeroSlot heroslot : heroies){
@@ -90,7 +90,9 @@ public class StorageTester {
 			System.out.println(monster.toString());
 		}
 		
-		Battlefield.create().loadHero(heroies).loadMonster(monsters).fight();
+		Battlefield.create().loadHero(heroies)
+					.loadMonster(MonsterFactory.getMonster(1, Constants.MONSTER_TEAM_NUMBER))
+					.fight();
 		
 		
 	}

@@ -103,13 +103,13 @@ public abstract class Character {
 	} // End EVC
 	
 	public int fight() {
-		int damage = random.nextInt(maxDmg - (minDmg + 1)) + minDmg;
+		/*int damage = random.nextInt(maxDmg - (minDmg + 1)) + minDmg;
 		if(random.nextInt(100) < this.luck)
 		{
 			System.out.println("Critical Attack!");
 			return (int) damage * 2;
-		}
-		return damage;
+		}*/
+		return (int) this.strength;
 	}
 	
 	public void specialAttack() {

@@ -98,7 +98,9 @@ public class Battlefield {
 			}
 			turn++;
 			
-		}
+		}// while
+		
+		
 	}
 	
 	public boolean checkEndFightMonster(){
