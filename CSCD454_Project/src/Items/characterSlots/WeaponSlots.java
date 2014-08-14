@@ -12,6 +12,11 @@ public class WeaponSlots implements Slots {
 		this.weaponItem = (WeaponItem) ItemFactory.create().buyItem(Constants.BASIC_SWORD );			// free weapon here
 	}
 	
+	public double increaseDamage(double damage){
+		double temp = damage - weaponItem.getAttackScore();
+		return temp;
+	}
+	
 	@Override
 	public Item swap(Item newItem) {
 		Item temp = null;

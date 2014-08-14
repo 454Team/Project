@@ -22,10 +22,10 @@ public abstract class HeroSlot {
 
 	@Override
 	public String toString(){
-		return 	"Hero : " + hero.toString() + "\n"+
-				"Weapon : " + weaponSlot.toString() + "\n"+ 
-				"head armor : " + headArmorSlot.toString() + "\n" + 
-				"Body armor : " + bodyArmorSlot.toString() + "\n";
+		return 	"Hero : " + hero.toString() + "\n";
+				//"Weapon : " + weaponSlot.toString() + "\n"+ 
+				//"head armor : " + headArmorSlot.toString() + "\n" + 
+				//"Body armor : " + bodyArmorSlot.toString() + "\n";
 	}
 	
 }

@@ -14,6 +14,13 @@ public class HeadArmorSlots implements Slots {
 		this.armorItem = (HeadArmor) ItemFactory.create().buyItem(Constants.BASIC_HEAD_ARMOR);
 	}
 	
+	public double reduceDamage(double damage){
+		double temp = damage - armorItem.getDefenseScore();
+		if(temp <0)
+			temp = 0;
+		return temp;
+	}
+	
 	@Override
 	public Item swap(Item newItem) {
 		Item temp = null;

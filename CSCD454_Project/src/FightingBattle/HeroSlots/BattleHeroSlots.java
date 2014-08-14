@@ -26,16 +26,24 @@ public class BattleHeroSlots extends HeroSlot{
 		isHeroAvailable = true;
 	}
 	
+	public void loseHealth(double damage){
+		
+		headArmorSlot.reduceDamage(damage);
+		bodyArmorSlot.reduceDamage(damage);
+		
+		hero.defend(damage);
+	}
+	
 	public boolean checkHeroAvailable(){
 		return isHeroAvailable;
 	}
 	
 	public boolean checkDefeated(){
-		return isDefeated;
+	 return hero.isAlive();
 	}
 	
-	public void normalAttack() {
-		hero.specialAttack();
+	public double normalAttack() {
+		 return weaponSlot.increaseDamage((double)hero.fight());
 	}
 	public void specialAttack(){
 		hero.specialAttack2();

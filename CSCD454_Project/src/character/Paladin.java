@@ -21,11 +21,12 @@ public class Paladin extends Character {
 	public int fight() {
 		return super.fight();
 	}
-
+	
+	/*
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
-	}
+	}*/
 	
 	public String toString() {
 		return super.toString();

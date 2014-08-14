@@ -12,10 +12,7 @@ public abstract class WeaponItem extends Item{
 	}
 	
 	public double getAttackScore(){
-		return attackScore;
+		return attackScore * (this.attackSpeed/100);
 	}
 	
-	public double getAttackSpeed(){
-		return this.attackSpeed;
-	}
 }

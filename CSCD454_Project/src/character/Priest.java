@@ -23,11 +23,11 @@ public class Priest extends Character {
 		// TODO Auto-generated method stub
 		
 	}
-
+	/*
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
-	}
+	}*/
 
 	public String toString() {
 		return super.toString();

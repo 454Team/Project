@@ -126,6 +126,14 @@ public abstract class Character {
 			this.setDefendingNow(true);
 	} // End defend
 	
+	public void defend(double damage) {
+		if(random.nextInt(100) < this.dexterity)
+			this.setDefendingNow(true);
+		this.health -=damage;
+		if(this.health <0)
+			this.health = 0;
+	} // End defend
+	
 	//TODO: check cap multiplication
 	public boolean levelUp() {
 		if(this.experience >= this.cap)
@@ -148,7 +156,7 @@ public abstract class Character {
 	}
 
 	public boolean isAlive() {
-		return this.health > 0;
+		return this.health <= 0;
 	}
 	
 	//Status Setters and Getters

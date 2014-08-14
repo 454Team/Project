@@ -14,11 +14,11 @@ public class DefaultCharacter extends Character {
 	public int fight() {
 		return super.fight();
 	}
-
+/*
 	@Override
 	public boolean isAlive() {
 		return super.getVitality() > 0;
-	}
+	}*/
 
 	@Override
 	public SkillsMain[] getSkillNames() {
