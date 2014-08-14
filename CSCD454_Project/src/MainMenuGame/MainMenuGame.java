@@ -5,7 +5,7 @@ package MainMenuGame;
 
 import java.util.Scanner;
 
-import Items.Inventory.StorageInventory;
+import Items.Inventory.ItemStorageInventory;
 import Items.WeaponArmor.Item;
 import Items.itemFactory.ItemFactory;
 import tester.BattleTester;
@@ -65,7 +65,7 @@ public class MainMenuGame {
 		    System.out.println(name);
 		}   
 
-		if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
+		if(!ItemStorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
 			System.out.println(name + " cannot be bought\n");
 		}
 	}
@@ -122,13 +122,13 @@ public class MainMenuGame {
 		    {
 		    	case 1: 
 					System.out.println("**Your Storage List**\n");
-		    		StorageInventory.create().showStorage();
+		    		ItemStorageInventory.create().showStorage();
 		    		break;
 			    case 2:
 					System.out.println("Please enter what item you would like to sell\n");
 					kb.nextLine();
 		    		name = kb.nextLine();
-			    	if(StorageInventory.create().sellItemfromStorage(name)){
+			    	if(ItemStorageInventory.create().sellItemfromStorage(name)){
 						System.out.println("Sold "+ name + " successfully\n");
 					}else
 						System.out.println("sell "+name+" failed\n");

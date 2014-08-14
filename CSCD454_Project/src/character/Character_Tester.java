@@ -9,15 +9,15 @@ public class Character_Tester {
 
 	public static void main(String[] args) {
 		
-		Character character = CharacterFactory.getCharacter("warrior");
+		//Character character = CharacterFactory.getCharacter("warrior");
 		
-		character = CharacterFactory.getCharacter("mage");
+		//character = CharacterFactory.getCharacter("mage");
 		
-		character = CharacterFactory.getCharacter("paladin");
+		//character = CharacterFactory.getCharacter("paladin");
 		
-		character = CharacterFactory.getCharacter("priest");
+		//character = CharacterFactory.getCharacter("priest");
 		
-		character = CharacterFactory.getCharacter("rogue");
+		//character = CharacterFactory.getCharacter("rogue");
 		
 	} // End main
 

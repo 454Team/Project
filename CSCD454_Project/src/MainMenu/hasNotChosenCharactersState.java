@@ -32,7 +32,7 @@ public class hasNotChosenCharactersState implements State {
 			try{
 				
 				//Get hero from character factory
-				Character character1 = CharacterFactory.getCharacter(kb.next());
+				Character character1 = CharacterFactory.create().buyCharacter(kb.next());
 				
 				//Don't allow wrong spelling to make default character
 				if(character1.getDesc().equalsIgnoreCase("Default"))

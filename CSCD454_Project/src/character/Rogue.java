@@ -10,7 +10,7 @@ import character.RogueSkills.*;
 public class Rogue extends Character {
 
 	public Rogue() {
-		super(new BackStab(), new DeadlyInfect(), new Intimidate(), 100.0, 60.0, 20.0, 0, 50.0, 60.0, "Rogue");
+		super(new BackStab(), new DeadlyInfect(), new Intimidate(), 100.0, 60.0, 20.0, 0, 50.0, 60.0, "Rogue",350,175);
 	} // End DVC
 	
 	@Override

@@ -32,10 +32,16 @@ public class MainMenuHeroSlot extends HeroSlot{
 	}
 
 	public Character SwapHero(Character willBeSwappedHero) {
-		Character temp = hero;
-		hero = null;
-		//hero = CharacterFactory.getCharacter(Constants.CHARACTER_RANDOM);
-		hero = willBeSwappedHero;
+		Character temp = null;
+		try{
+			temp = hero;
+			hero = null;
+			//hero = CharacterFactory.getCharacter(Constants.CHARACTER_RANDOM);
+			hero = willBeSwappedHero;
+		}catch(Exception e){
+			hero = temp;
+			temp = null;
+		}
 		return temp;
 	}
 	

@@ -14,7 +14,7 @@ public abstract class HeroSlot {
 	
 	public HeroSlot() {
 		// create slot with all basic at first
-		hero = CharacterFactory.getCharacter(Constants.CHARACTER_RANDOM);
+		hero = CharacterFactory.create().buyCharacter(Constants.CHARACTER_DEFAULT);
 		weaponSlot = new WeaponSlots();
 		headArmorSlot = new HeadArmorSlots();
 		bodyArmorSlot = new BodyArmorSlots();

@@ -2,6 +2,7 @@ package character;
 
 import java.util.Random;
 
+import Items.WeaponArmor.Item;
 import character.DefaultSkills.*;
 
 /*
@@ -19,6 +20,8 @@ public abstract class Character {
 	private long experience;
 	private long cap;
 	private boolean isDefendingNow;
+	private double money;
+	private double buyBackMoney;
 	
 	private String desc;
 	
@@ -47,6 +50,8 @@ public abstract class Character {
 		this.setDesc("Default");
 		this.setCap(10);
 		this.setDefendingNow(false);
+		this.setMoney(0);
+		this.setBuyBackMoney(0);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -65,6 +70,28 @@ public abstract class Character {
 		this.setDesc(desc);
 		this.setCap(10);
 		this.setDefendingNow(false);
+		this.setMoney(0);
+		this.setBuyBackMoney(0);
+	} // End EVC
+	
+	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc,double sellMoney,double backMoney) {
+		/* Set Skills */
+		this.setSkill1(skill1);
+		this.setSkill2(skill2);
+		this.setSkill3(skill3);
+		/* Set Attributes */
+		this.setAgility(agility);
+		this.setDexterity(dexterity);
+		this.setExperience(0);
+		this.setIntelligence(intelligence);
+		this.setLuck(luck);
+		this.setStrength(strength);
+		this.setVitality(vitality);
+		this.setDesc(desc);
+		this.setCap(10);
+		this.setDefendingNow(false);
+		this.setMoney(sellMoney);
+		this.setBuyBackMoney(backMoney);
 	} // End EVC
 	
 	public int fight() {
@@ -256,9 +283,37 @@ public abstract class Character {
 		this.cap = cap;
 	}
 
+	public boolean validate(double balance){
+		return balance >= this.money ; 
+	}
+	
+	public double getPaybackMoney(){
+		return this.buyBackMoney;
+	}
+	
+	public double getMoney(){
+		return this.money;
+	}
+	
+	public void setMoney(double money){
+		this.money = money;
+	}
+	
+	public void setBuyBackMoney(double buyBackMoney){
+		this.buyBackMoney = buyBackMoney;
+	}
+	
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
 		return this.getDesc() + " with " + this.getVitality() + "hp" + " and " + this.getStrength() + "dmg";
+	}
+
+	public boolean compareName(Character character){
+		return this.getDesc().equals(character.getDesc());
+	}
+	
+	public boolean compareName(String character){
+		return this.getDesc().equals(character);
 	}
 } // End Character

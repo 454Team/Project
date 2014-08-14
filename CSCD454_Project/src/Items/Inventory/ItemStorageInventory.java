@@ -3,24 +3,25 @@ package Items.Inventory;
 import java.util.LinkedList;
 import java.util.List;
 
+import character.Character;
 import Items.MoneyBalance.Balance;
 import Items.MoneyBalance.BalanceAccess;
 import Items.WeaponArmor.Item;
 
-public class StorageInventory implements BalanceAccess{
+public class ItemStorageInventory implements BalanceAccess{
 	
 	private static final int max = 100;
-	private static StorageInventory storageInventory = null;
+	private static ItemStorageInventory storageInventory = null;
 	private List<Item> itemList = null;
-	public static StorageInventory create(){
+	public static ItemStorageInventory create(){
 		if(storageInventory == null){
-			storageInventory = new StorageInventory();
+			storageInventory = new ItemStorageInventory();
 		}
 		
 		return storageInventory;
 	}
 	
-	private  StorageInventory() {
+	private  ItemStorageInventory() {
 		itemList = new LinkedList<Item>();
 	}
 	
@@ -134,6 +135,12 @@ public class StorageInventory implements BalanceAccess{
 	@Override
 	public boolean paidTransaction(Balance balance, Item item) {
 		return balance.CompleteAddedTransaction(item);
+	}
+
+	@Override
+	public boolean paidTransaction(Balance balance, Character character) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

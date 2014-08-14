@@ -10,7 +10,7 @@ import character.SorcererSkills.*;
 public class Sorcerer extends Character {
 
 	public Sorcerer() {
-		super(new EarthSpike(), new MagicCrasher(), new SoulBurn(), 30.0, 50.0, 100.0, 60.0, 20.0, 60.0, "Sorcerer");
+		super(new EarthSpike(), new MagicCrasher(), new SoulBurn(), 30.0, 50.0, 100.0, 60.0, 20.0, 60.0, "Sorcerer",500,250);
 	} // End DVC
 	
 	@Override

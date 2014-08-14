@@ -3,10 +3,13 @@ package tester;
 import java.awt.Container;
 import java.util.ArrayList;
 
+import character.CharacterFactory;
+
 import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
 import Items.Constants.Constants;
-import Items.Inventory.StorageInventory;
+import Items.Inventory.CharacterStorageInventory;
+import Items.Inventory.ItemStorageInventory;
 import Items.WeaponArmor.Item;
 import Items.characterSlots.HeroSlot;
 import Items.itemFactory.ItemFactory;
@@ -22,7 +25,7 @@ public class StorageTester {
 		buyItemTester(Constants.ANGEL_HEAD_ARMOR);
 		
 		// show storeage
-		StorageInventory.create().showStorage();
+		ItemStorageInventory.create().showStorage();
 		
 		// get an item from the list
 		//getItemTester(Constants.ANGEL_BODY_ARMOR);
@@ -37,13 +40,13 @@ public class StorageTester {
 		buyItemTester(Constants.BASIC_AXES);
 		
 		// show 
-		StorageInventory.create().showStorage();
+		ItemStorageInventory.create().showStorage();
 		
 		// sell basic item will fail 
 		sellItemTester(Constants.BASIC_AXES);
 		
 		// show 
-				StorageInventory.create().showStorage();
+				ItemStorageInventory.create().showStorage();
 		
 		int numberOfHero = 3;
 		ArrayList<MainMenuHeroSlot> heroies = new ArrayList<MainMenuHeroSlot>();
@@ -63,12 +66,24 @@ public class StorageTester {
 		}
 		
 		// show 
-		StorageInventory.create().showStorage();
+		ItemStorageInventory.create().showStorage();
 		
+		
+		CharacterStorageInventory.create().addCharacter(CharacterFactory.create().buyCharacter(Constants.CHARACTER_PALADIN));
+		CharacterStorageInventory.create().addCharacter(CharacterFactory.create().buyCharacter(Constants.CHARACTER_ROGUE));
+		
+		CharacterStorageInventory.create().showStorage();
+		
+		CharacterStorageInventory.create().addCharacter(heroies.get(0).SwapHero(CharacterStorageInventory.create().getCharacterfromStorage(Constants.CHARACTER_PALADIN)));
+		
+		CharacterStorageInventory.create().showStorage();
+		for(HeroSlot heroslot : heroies){
+			System.out.println(heroslot.toString());
+		}
 	}
 	
 	public static void sellItemTester(String name){
-		if(StorageInventory.create().sellItemfromStorage(name)){
+		if(ItemStorageInventory.create().sellItemfromStorage(name)){
 			System.out.println("Sell "+ name + " successfully\n");
 		}else
 			System.out.println("sell "+name+" failed\n");
@@ -76,7 +91,7 @@ public class StorageTester {
 	
 	public static void addItemTester(Item item){
 		if(item != null){
-			if(StorageInventory.create().addItem(item)){
+			if(ItemStorageInventory.create().addItem(item)){
 				
 				System.out.println("add "+ item.toString() + " successfully\n");
 			}else{
@@ -88,7 +103,7 @@ public class StorageTester {
 	
 	public static Item getItemTester(String name){
 		// get item
-				Item item = StorageInventory.create().getItemfromStorage(name);
+				Item item = ItemStorageInventory.create().getItemfromStorage(name);
 				if(item != null)
 					System.out.println("you just get "+ item + " from item list \n");
 				else
@@ -98,7 +113,7 @@ public class StorageTester {
 	}
 	
 	public static void buyItemTester(String name){
-		if(!StorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
+		if(!ItemStorageInventory.create().addItem(ItemFactory.create().buyItem(name)) ){
 			System.out.println(name + " cannot be bought\n");
 		}
 	}

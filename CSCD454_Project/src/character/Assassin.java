@@ -10,7 +10,9 @@ import character.AssassinSkills.*;
 public class Assassin extends Character {
 
 	public Assassin() {
-		super(new DoubleAttack(), new SonicBlow(), new ThrowVenomKnife(), 50.0, 40.0, 0, 10.0, 100.0, 80.0, "Assassin");
+		super(new DoubleAttack(), new SonicBlow(), new ThrowVenomKnife(), 50.0, 40.0, 0, 10.0, 100.0, 80.0, "Assassin",200,100);
+		
+		//super(new DoubleAttack(), new SonicBlow(), new ThrowVenomKnife(), 50.0, 40.0, 0, 10.0, 100.0, 80.0, "Assassin");
 	} // End DVC
 	
 	@Override

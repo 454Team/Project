@@ -1,5 +1,6 @@
 package Items.itemFactory;
 
+import character.Character;
 import Items.Constants.Constants;
 import Items.MoneyBalance.Balance;
 import Items.MoneyBalance.BalanceAccess;
@@ -65,86 +66,60 @@ public class ItemFactory implements BalanceAccess{
 		/*    Create swords     */
 		if(typeName.equals(Constants.LIGHTING_SWORD)){
 			item = new LightingSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.AKAVIRI_SWORD)){
 			item = new AkaviriSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.BLADES_SWORD)){
 			item = new BladesSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.CEREMONIAL_SWORD)){
 			item = new CeremonialSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DRAGONBANE_SWORD)){
 			item = new DragonBaneSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DRAGONBONE_SWORD)){
 			item = new DragonBoneSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.EBONY_SWORD)){
 			item = new EbonySword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FIRE_SWORD)){
 			item = new FireSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.GLASS_SWORD)){
 			item = new GlassSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.IMPERIAL_SWORD)){
 			item = new ImperialSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.IRON_SWORD)){
 			item = new IronSword();
-			item = Itemvalidate(item);
 		}
 		/*    Create axes     */
 		else if(typeName.equals(Constants.ANCIENT_NORD_WAR_AXE)){
 			item = new AncientNordWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.ANCIENT_NORDIC_PICKAXE)){
 			item = new AncientNordicPickaxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FORSWORN_AXE)){
 			item = new ForswornAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.CEREMONIAL_AXE)){
 			item = new CeremonialAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DAEDRIC_WAR_AXE)){
 			item = new DaedricWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DAWNGUARD_RUNE_AXE)){
 			item = new DawnguardRuneAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DAWNGUARD_WAR_AXE)){
 			item = new DawnguardWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DRAGONBONE_WAR_AXE)){
 			item = new DragonBoneWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.DWARVEN_WAR_AXE)){
 			item = new DwarvenWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.EBONY_WAR_AXE)){
 			item = new EbonyWarAxe();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.ELVEN_WAR_AXE)){
 			item = new ElvenWarAxe();
-			item = Itemvalidate(item);
 		}
 		/*    Create basic     */
 		else if(typeName.equals(Constants.BASIC_SWORD)){
 			item = new BasicSword();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.BASIC_AXES)){
 			item = new BasicAxes();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.BASIC_HEAD_ARMOR)){
 			item = new BasicHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.BASIC_BODY_ARMOR)){
 			item = new BasicBodyArmor();
-			item = Itemvalidate(item);
 		}
 		
 		/*
@@ -153,22 +128,16 @@ public class ItemFactory implements BalanceAccess{
 	
 		else if(typeName.equals(Constants.CHAIN_VEST_BODY_ARMOR)){
 			item = new ChainVestBodyArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.CLOTH_BODY_ARMOR)){
 			item = new ClothBodyArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FROZEN_BODY_ARMOR)){
 			item = new FrozenBodyArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.ANGEL_BODY_ARMOR)){
 			item = new AngelBodyArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FIRE_BODY_ARMOR)){
 			item = new FireBodyArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.LIGHING_BODY_ARMOR)){
 			item = new LightingBodyArmor();
-			item = Itemvalidate(item);
 		}
 		
 
@@ -185,24 +154,19 @@ public class ItemFactory implements BalanceAccess{
 		
 		else if(typeName.equals(Constants.CHAIN_VEST_HEAD_ARMOR)){
 			item = new ChainVestHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.CLOTH_HEAD_ARMOR)){
 			item = new ClothHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FROZEN_HEAD_ARMOR)){
 			item = new FrozenHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.ANGEL_HEAD_ARMOR)){
 			item = new AngelHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.FIRE_HEAD_ARMOR)){
 			item = new FireHeadArmor();
-			item = Itemvalidate(item);
 		}else if(typeName.equals(Constants.LIGHING_HEAD_ARMOR)){
 			item = new LightingHeadArmor();
-			item = Itemvalidate(item);
+	
 		}
-		
+		item = Itemvalidate(item);
 		return item;
 	}
 	
@@ -225,6 +189,12 @@ public class ItemFactory implements BalanceAccess{
 	@Override
 	public boolean paidTransaction(Balance balance,Item item) {
 		return balance.CompleteTransaction(item);
+	}
+
+	@Override
+	public boolean paidTransaction(Balance balance, Character character) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

@@ -14,7 +14,7 @@ public class Paladin extends Character {
 	
 	
 	public Paladin() {
-		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0, "Paladin");
+		super(new Gospel(), new HolyCrossAttack(), new Sacrifice(), 90.0, 40.0, 0, 30.0, 80.0, 80.0, "Paladin",300,150);
 	} // End DVC
 	
 	@Override

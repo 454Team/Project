@@ -1,5 +1,6 @@
 package tester;
 
+import Items.Constants.Constants;
 import character.CharacterFactory;
 import character.Paladin;
 
@@ -12,20 +13,20 @@ public class Character_Tester {
 
 	public static void main(String[] args) {
 		
-		character.Character character = CharacterFactory.getCharacter("warrior");
+		character.Character character = CharacterFactory.create().buyCharacter(Constants.CHARACTER_ASSASSIN);
 		System.out.println(character.toString());
 		
-		character = CharacterFactory.getCharacter("mage");
-		System.out.println(character.toString());
+		//character = CharacterFactory.getCharacter("mage");
+		//System.out.println(character.toString());
 
-		character = CharacterFactory.getCharacter("paladin");
-		System.out.println(character.toString());
+		//character = CharacterFactory.getCharacter("paladin");
+		//System.out.println(character.toString());
 
-		character = CharacterFactory.getCharacter("priest");
-		System.out.println(character.toString());
+		//character = CharacterFactory.getCharacter("priest");
+		//System.out.println(character.toString());
 
-		character = CharacterFactory.getCharacter("rogue");
-		System.out.println(character.toString());
+		//character = CharacterFactory.getCharacter("rogue");
+		//System.out.println(character.toString());
 
 	} // End main
 
