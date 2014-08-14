@@ -31,7 +31,7 @@ public class BattleHeroSlots extends HeroSlot{
 		headArmorSlot.reduceDamage(damage);
 		bodyArmorSlot.reduceDamage(damage);
 		
-		hero.defend(damage);
+		hero.applyDamage(damage);
 	}
 	
 	public boolean checkHeroAvailable(){
