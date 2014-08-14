@@ -34,10 +34,11 @@ public class hasChosenCharactersState implements State {
 		
 		String skillName = "";
 		int check = -1;
-		int choiceCount = 0;
 		
 		for(int i = 0; i < heroies.size(); i++)
 		{
+			int choiceCount = 0;
+
 			//For specific hero in hero slot
 			MainMenuHeroSlot temp = (MainMenuHeroSlot) heroies.get(i);
 			

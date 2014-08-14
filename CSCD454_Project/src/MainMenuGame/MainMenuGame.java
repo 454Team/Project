@@ -149,12 +149,84 @@ public class MainMenuGame {
 						System.out.println("sell "+name+" failed\n");
 			   		break;
 			    case 3:
-			    	
+			    	equipItem();
 			    	break;
 		    }
 		}
 	}
+
+	private static void equipItem() {
+		int heroChoice = 0;
+		int choice = 0;
+		String name = "";
+		while(choice != 4)
+		{
+			System.out.println("Please choose what hero you would like to change equipment on(Enter the hero number).\n"
+					+ "4). Or Exit.");
+					printHeroList();
+			try{   
+				heroChoice = kb.nextInt();
+		    }
+		    catch(Exception e){
+		    	break;
+			}    
+			System.out.println("Please choose what type of equipment you would like to change.\n"
+					+ "1. To change weapon\n"
+					+ "2. To change headgear\n"
+					+ "3. To change armor\n"
+					+ "4). Or Exit.\n");
+			try{   
+				choice = kb.nextInt();
+		    }
+		    catch(Exception e){
+		    	break;
+			} 
+			System.out.println("Your inventory consists of: \n");
+    		ItemStorageInventory.create().showStorage();
+			System.out.println("Please enter what item you would like to equip: \n");
+			try{   
+				name = kb.nextLine();
+		    }
+		    catch(Exception e){
+		    	break;
+			} 
+			switch(choice)
+		    {
+		    	case 1: 
+		    		addItemSomething( heroSlots.get(heroChoice-1).SwapWeapon(getItemSomething(name)));
+		    		break;
+			    case 2:
+		    		addItemSomething( heroSlots.get(heroChoice-1).SwapHeadArmor(getItemSomething(name)));
+			   		break;
+			   	case 3:
+		    		addItemSomething( heroSlots.get(heroChoice-1).SwapBodyArmor(getItemSomething(name)));
+			   		break;
+		    }
+		}		
+		
+	}
 	
 //----------------------------------------------------------------------------------------------------------------------------------
-
+	public static void addItemSomething(Item item){
+		if(item != null){
+			if(ItemStorageInventory.create().addItem(item)){
+				
+				System.out.println("add "+ item.toString() + " successfully\n");
+			}else{
+				System.out.println("add "+ item.toString() + " failed\n");
+			}
+		}else
+			System.out.println("add item " + " failed\n");
+	}
+	
+	public static Item getItemSomething(String name){
+		// get item
+				Item item = ItemStorageInventory.create().getItemfromStorage(name);
+				if(item != null)
+					System.out.println("you just get "+ item + " from item list \n");
+				else
+					System.out.println("getting "+ item + " failed\n");
+				
+				return item;
+	}
 }
