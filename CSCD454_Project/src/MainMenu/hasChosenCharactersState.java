@@ -49,8 +49,9 @@ public class hasChosenCharactersState implements State {
 			do {
 			try {
 			skillName = scanchoice.next();
+			scanchoice.nextLine();
 			} catch(Exception e) {
-				e.printStackTrace();
+				System.out.println("Error: Invalid input.");
 			}
 			check = validateSkill(skillName, temp);
 			if(check != -1)
