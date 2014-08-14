@@ -1,5 +1,6 @@
 package MainMenu;
 
+import FightingBattle.HeroSlots.BattleHeroSlots;
 import Items.Constants.Constants;
 import Items.WeaponArmor.Item;
 import Items.characterSlots.BodyArmorSlots;
@@ -15,6 +16,13 @@ public class MainMenuHeroSlot extends HeroSlot{
 		super();
 	}
 
+	public MainMenuHeroSlot(BattleHeroSlots battleHeroSlot){
+		this.hero = battleHeroSlot.getcharacter();
+		this.weaponSlot = battleHeroSlot.getWeaponSlot();
+		this.headArmorSlot = battleHeroSlot.getHeadArmorSlots();
+		this.bodyArmorSlot = battleHeroSlot.getBodyArmorSlots();
+	}
+	
 	public Item SwapWeapon(Item willBeSwappedItem) {
 		
 		return weaponSlot.swap(willBeSwappedItem);
@@ -45,20 +53,6 @@ public class MainMenuHeroSlot extends HeroSlot{
 		return temp;
 	}
 	
-	public Character getcharacter(){
-		return hero;
-	}
 	
-	public WeaponSlots getWeaponSlot(){
-		return weaponSlot;
-	}
-	
-	public BodyArmorSlots getBodyArmorSlots(){
-		return bodyArmorSlot;
-	}
-	
-	public HeadArmorSlots getHeadArmorSlots(){
-		return headArmorSlot;
-	}
 
 }

@@ -53,7 +53,7 @@ public class Battlefield {
 		return battleField;
 	}
 	
-	public void fight(){			// normal attack , 1-1 push 1 out of stack
+	public ArrayList<MainMenuHeroSlot> fight(){			// normal attack , 1-1 push 1 out of stack
 		int turn = 1;							// special attack 1-3 push 3 monster out of stack , 1 hero out of stack
 		while(checkEndFightMonster() == false && checkEndFightHero() == false){
 			
@@ -101,6 +101,28 @@ public class Battlefield {
 		}// while
 		
 		
+		return reloadHero();
+		
+	}
+	
+	public ArrayList<MainMenuHeroSlot> reloadHero(){
+		ArrayList<MainMenuHeroSlot> temp = new ArrayList<MainMenuHeroSlot>();
+		
+		while( heroTurn.peek() != null ){
+			BattleHeroSlots slot = heroTurn.remove();
+			
+			temp.add(new MainMenuHeroSlot(slot));
+			
+		}
+		
+		if(temp.size() <Constants.HERO_TEAM_NUMBER){
+			for(int i = 0; i < Constants.HERO_TEAM_NUMBER - temp.size() ; i++){
+				temp.add(new MainMenuHeroSlot());
+			}
+		}
+		
+		System.out.println("size of hero :" + temp.size());
+		return temp;
 	}
 	
 	public boolean checkEndFightMonster(){
