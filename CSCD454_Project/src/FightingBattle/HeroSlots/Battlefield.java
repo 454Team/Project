@@ -65,25 +65,28 @@ public class Battlefield {
 			BattleHeroSlots hero =null;
 			MonsterSlots monster = null;
 			
-			//hero attack
-			if(heroTurn.peek()!=null){
-				
-				hero= heroTurn.remove();
-				System.out.println("monster attack with 25 damages");
-				hero.loseHealth(25);  
-				
-				System.out.println(" hero " + hero.toString() );
-				
-			}
+			
 			// monster attack
 			if(monsterTurn.peek() != null){
 					
+				monster = monsterTurn.remove();
+				
+				//hero attack
+				if(heroTurn.peek()!=null){
+					
+					hero= heroTurn.remove();
+					System.out.println("monster attack with 25 damages");
+					hero.loseHealth(monster.attack());  
+					
+					System.out.println(" hero " + hero.toString() );
+					
+				}
+				
 					if(hero.checkDefeated() == true){
 						//monsterTurn.add(monster);
 						numHero--;
-						monster = monsterTurn.remove();
+						
 					}else{
-						monster = monsterTurn.remove();
 						System.out.println("hero attack with" + hero.normalAttack() + " damages");
 						monster.loseHealth(hero.normalAttack());				// monster attack if alive , ask users here
 						System.out.println(" monster " + monster.toString());
@@ -115,8 +118,10 @@ public class Battlefield {
 			
 		}
 		
-		if(temp.size() <Constants.HERO_TEAM_NUMBER){
-			for(int i = 0; i < Constants.HERO_TEAM_NUMBER - temp.size() ; i++){
+		int count = temp.size();
+		
+		if(count <Constants.HERO_TEAM_NUMBER){
+			for(int i = 0; i < Constants.HERO_TEAM_NUMBER - count ; i++){
 				temp.add(new MainMenuHeroSlot());
 			}
 		}

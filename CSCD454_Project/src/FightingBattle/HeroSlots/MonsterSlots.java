@@ -30,8 +30,8 @@ public class MonsterSlots {
 		monster.defend(damage);
 	}
 	
-	public void attack(){
-		monster.fight();
+	public int attack(){
+		return monster.fight();
 	}
 	
 	public void defend(){
