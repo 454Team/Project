@@ -54,7 +54,7 @@ public abstract class Character {
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End DVC
 
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc) {
@@ -76,7 +76,7 @@ public abstract class Character {
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End EVC
 	
 	public Character(SkillsMain skill1, SkillsMain skill2, SkillsMain skill3, double agility, double dexterity, double intelligence, double luck, double strength, double vitality, String desc,double sellMoney,double backMoney) {
@@ -98,7 +98,7 @@ public abstract class Character {
 		this.setMoney(sellMoney);
 		this.setBuyBackMoney(backMoney);
 		this.setLevel(1);
-		this.setHealth(this.vitality);
+		this.setHealth(this.vitality * 3);
 	} // End EVC
 	
 	public int fight() {

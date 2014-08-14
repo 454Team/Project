@@ -29,6 +29,7 @@ public abstract class Monster {
 		this.setLuck(50.0);
 		this.setStrength(50.0);
 		this.setVitality(50.0);
+		this.setHealth(vitality * 3);
 		this.isDefendingNow = false;
 	} // End DVC
 	
@@ -44,7 +45,7 @@ public abstract class Monster {
 		this.setVitality(vitality);
 		this.isDefendingNow = false;
 		this.desc = desc;
-		this.setHealth(vitality);
+		this.setHealth(vitality * 3);
 	} // End EVC
 
 	public SkillsMain getSkill1() {
