@@ -10,6 +10,6 @@ import Monster.VesperSkills.SuicideBombing;
 public class Vesper extends Monster {
 
 	public Vesper(int room) {
-		super(new DarknessJupitel(), new SuicideBombing(), 50.0*room, 160.0*room, 70.00*room, 150.0*room, 100.0*room, 30.0*room, "Vesper");
+		super(new DarknessJupitel(), new SuicideBombing(), 50.0*room, 160.0*room, 70.00*room, 2.0*room, 100.0*room, 30.0*room, "Vesper");
 	} // End DVC
 }

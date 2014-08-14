@@ -10,6 +10,6 @@ import Monster.ThanatosPhantomSkills.SoulStrike;
 public class ThanatosPhantom extends Monster {
 
 	public ThanatosPhantom(int room) {
-		super(new SoulStrike(), new Bash(), 90.0*room, 40.0*room, 0*room, 30.0*room, 80.0*room, 80.0*room, "Thanatos Phantom");
+		super(new SoulStrike(), new Bash(), 90.0*room, 40.0*room, 0*room, 2.0*room, 80.0*room, 80.0*room, "Thanatos Phantom");
 	} // End DVC
 } // End ThanatosPhantom
