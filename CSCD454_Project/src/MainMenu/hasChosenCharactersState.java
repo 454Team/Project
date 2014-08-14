@@ -54,10 +54,8 @@ public class hasChosenCharactersState implements State {
 				System.out.println("Error: Invalid input.");
 			}
 			check = validateSkill(skillName, temp);
-			if(check != -1)
+			if(check != -1) {
 				choiceCount++;
-			else
-				System.out.println("Please input valid skill name.");
 			if(choiceCount == 1) {
 				temp.getcharacter().setSkill1(temp.getcharacter().getSkillNames()[check]);
 				System.out.println("First Skill Chosen");
@@ -66,6 +64,9 @@ public class hasChosenCharactersState implements State {
 				temp.getcharacter().setSkill2(temp.getcharacter().getSkillNames()[check]);
 				System.out.println("Second Skill Chosen");
 			}
+			} // End if choice != -1
+			else
+				System.out.println("Please input valid skill name.");
 			} while(choiceCount < 2);
 		gumballMachine.setState(gumballMachine.hasChosenItemsState());
 		scanchoice.nextLine();
