@@ -2,8 +2,7 @@ package character;
 
 import java.util.Random;
 
-import Items.WeaponArmor.Item;
-import character.DefaultSkills.*;
+import character.DefaultSkills.Default;
 
 /*
  * @author Kevin Borling
@@ -28,7 +27,7 @@ public abstract class Character {
 	private String desc;
 	
 	private final int maxDmg = (int) this.strength;
-	private final int minDmg = (int) (this.strength*.975);
+	private final int minDmg = 1;
 	
 	private SkillsMain skill1;
 	private SkillsMain skill2;
@@ -132,10 +131,15 @@ public abstract class Character {
 	public void defend(double damage) {
 		if(random.nextInt(100) < this.dexterity)
 			this.setDefendingNow(true);
-		this.health -=damage;
 		if(this.health <0)
 			this.health = 0;
 	} // End defend
+	
+	public void applyDamage(double damage) {
+		this.health -= damage;
+		if(this.health <0)
+			this.health = 0;
+	}
 	
 	//TODO: check cap multiplication
 	public boolean levelUp() {
