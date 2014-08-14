@@ -1,5 +1,7 @@
 package Monster;
 
+import java.text.DecimalFormat;
+
 import character.SkillsMain;
 
 /*
@@ -161,6 +163,7 @@ public abstract class Monster {
 	}
 	
 	public String toString() {
-		return this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.getStrength() + "dmg";
+		DecimalFormat df = new DecimalFormat("#.##");
+		return this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + this.getStrength() + "dmg";
 	}
 } // End Character

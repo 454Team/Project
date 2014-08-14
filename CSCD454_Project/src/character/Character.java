@@ -1,5 +1,6 @@
 package character;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 import character.DefaultSkills.Default;
@@ -344,7 +345,8 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
+		DecimalFormat df = new DecimalFormat("#.##");
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + df.format(this.getHealth()) + "hp" + " and " + this.maxDmg + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
 	}
 
 	public boolean compareName(Character character){
