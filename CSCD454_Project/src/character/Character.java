@@ -127,7 +127,7 @@ public abstract class Character {
 	public void defend() {
 		if(random.nextInt(100) < this.dexterity)
 			this.setDefendingNow(true);
-	} // End defend
+	} // End defend  
 	
 	//TODO: check cap multiplication
 	public boolean levelUp() {
