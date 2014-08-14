@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import FightingBattle.HeroSlots.Battlefield;
+import Items.Constants.Constants;
 import Items.Inventory.ItemStorageInventory;
 import Items.WeaponArmor.Item;
 import Items.characterSlots.HeroSlot;
@@ -63,7 +64,9 @@ public class MainMenuGame {
 	
 	private static void storeMenu() {
 		String name = "Avakiri Sword";
-		System.out.println("Please enter the name of the item you would like to buy\n");
+		System.out.println("Please enter the name of the item you would like to buy\n\n");
+		for(int i = 0; i < Constants.storeItemNames.length; i++)
+			System.out.println(" - " + Constants.storeItemNames[i]);
 		try{   		
 			kb.nextLine();
 			name = kb.nextLine();
@@ -85,6 +88,7 @@ public class MainMenuGame {
 		while(choice != 0)
 		{
 			choice = 100;
+		    printHeroList();
 			System.out.println("Please enter what level of room that you would like to enter (integer from 1 to 10).\n"
 					+ "Or please enter zero to go back to the main menu.\n");
 			try{   
@@ -94,7 +98,8 @@ public class MainMenuGame {
 			    Battlefield.create();
 			    Battlefield.create().loadMonster(monsters);
 			    Battlefield.create().loadHero(heroSlots);
-			    Battlefield.create().fight();
+			    heroSlots = Battlefield.create().fight();
+			    printHeroList();
 			    break;
 		    }
 		    catch(Exception e){
@@ -103,6 +108,12 @@ public class MainMenuGame {
 		}		
 	}
 
+	private static void printHeroList()
+	{
+		for(HeroSlot heroslot : heroSlots){
+			System.out.println(heroslot.toString());
+		}
+	}
 //----------------------------------------------------------------------------------------------------------------------------------
 
 	private static void inventoryMenu() {

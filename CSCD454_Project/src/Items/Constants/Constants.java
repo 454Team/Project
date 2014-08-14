@@ -34,7 +34,12 @@ public class Constants {
 	public static final SkillsMain [] rogueSkillSkills =     {new BackStab(),new DeadlyInfect(),new Intimidate()};
 	public static final SkillsMain [] sorcererSkillSkills =  {new EarthSpike(),new MagicCrasher(),new SoulBurn()};
 	
-	public static final String [] storeItemNames = {"Basic sword","Basic axes","Basic head armor","Basic body armor"};
+	public static final String [] storeItemNames = {"Lighting Sword","Akaviri Sword","Blades Sword","Ceremonial Sword","Dragon Bane Sword"
+		,"Dragon Bone Sword","Ebony Sword","Glass Sword","Iron Sword","Fire Sword","Imperial Sword","Ancient Nord War Axe","Ancient Nordic Pickaxe"
+		,"Forsworn Axe","Ceremonial Axe","Daedric War Axe","Dawnguard Rune Axe","Dawnguard War Axe","Dragonbone War Axe","Dwarven War Axe"
+		,"Ebony War Axe","Elven War Axe","[B] Chain Vest","[B] Cloth armor","[B] Frozen armor","[B] Guardian Angel armor","[B] fire armor"
+		,"[B] lighting armor","[H] Chain Vest","[H] Cloth armor","[H] Frozen armor","[H] Guardian Angel armor","[H] fire armor"
+		,"[H] lighting armor"};
 	
 	/*
 	 * basic names
@@ -43,8 +48,6 @@ public class Constants {
 	public static final String BASIC_AXES = "Basic axes";
 	public static final String BASIC_HEAD_ARMOR = "Basic head armor";
 	public static final String BASIC_BODY_ARMOR = "Basic body armor";
-	
-	
 	/*
 	 * sword names
 	 */
@@ -59,7 +62,6 @@ public class Constants {
 	public static final String IRON_SWORD = "Iron Sword";
 	public static final String FIRE_SWORD = "Fire Sword";
 	public static final String IMPERIAL_SWORD = "Imperial Sword";
-	
 	/*
 	 * Axes names
 	 */
@@ -74,27 +76,24 @@ public class Constants {
 	public static final String DWARVEN_WAR_AXE = "Dwarven War Axe";
 	public static final String EBONY_WAR_AXE = "Ebony War Axe";
 	public static final String ELVEN_WAR_AXE = "Elven War Axe";
-	
 	/*
 	 * body armor names
 	 */
-	public static final String CHAIN_VEST_BODY_ARMOR = " [B] Chain Vest";
-	public static final String CLOTH_BODY_ARMOR = " [B] Cloth armor";
-	public static final String FROZEN_BODY_ARMOR = " [B] Frozen armor";	
-	public static final String ANGEL_BODY_ARMOR = " [B] Guardian Angel armor";
-	public static final String FIRE_BODY_ARMOR = " [B] fire armor";
-	public static final String LIGHING_BODY_ARMOR = " [B] lighting armor";
-	
-	
+	public static final String CHAIN_VEST_BODY_ARMOR = "[B] Chain Vest";
+	public static final String CLOTH_BODY_ARMOR = "[B] Cloth armor";
+	public static final String FROZEN_BODY_ARMOR = "[B] Frozen armor";	
+	public static final String ANGEL_BODY_ARMOR = "[B] Guardian Angel armor";
+	public static final String FIRE_BODY_ARMOR = "[B] fire armor";
+	public static final String LIGHING_BODY_ARMOR = "[B] lighting armor";
 	/*
 	 * head armor names
 	 */
-	public static final String CHAIN_VEST_HEAD_ARMOR = " [H] Chain Vest";
-	public static final String CLOTH_HEAD_ARMOR = " [H] Cloth armor";
-	public static final String FROZEN_HEAD_ARMOR = " [H] Frozen armor";	
-	public static final String ANGEL_HEAD_ARMOR = " [H] Guardian Angel armor";
-	public static final String FIRE_HEAD_ARMOR = " [H] fire armor";
-	public static final String LIGHING_HEAD_ARMOR = " [H] lighting armor";
+	public static final String CHAIN_VEST_HEAD_ARMOR = "[H] Chain Vest";
+	public static final String CLOTH_HEAD_ARMOR = "[H] Cloth armor";
+	public static final String FROZEN_HEAD_ARMOR = "[H] Frozen armor";	
+	public static final String ANGEL_HEAD_ARMOR = "[H] Guardian Angel armor";
+	public static final String FIRE_HEAD_ARMOR = "[H] fire armor";
+	public static final String LIGHING_HEAD_ARMOR = "[H] lighting armor";
 	
 	/*
 	 * Character names

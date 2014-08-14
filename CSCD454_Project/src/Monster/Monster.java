@@ -109,8 +109,8 @@ public abstract class Monster {
 		this.dexterity = dexterity;
 	}
 
-	public void fight() {
-		// TODO Auto-generated method stub
+	public int fight() {
+		return (int) this.getStrength();
 		
 	}
 
