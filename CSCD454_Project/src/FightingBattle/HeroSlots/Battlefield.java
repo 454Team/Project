@@ -113,7 +113,7 @@ public class Battlefield {
 		
 		while( heroTurn.peek() != null ){
 			BattleHeroSlots slot = heroTurn.remove();
-			
+			slot.setExp();
 			temp.add(new MainMenuHeroSlot(slot));
 			
 		}
