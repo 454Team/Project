@@ -332,7 +332,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg/nExperience: " + this.getExperience() + "/" + this.getCap();
 	}
 
 	public boolean compareName(Character character){
