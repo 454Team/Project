@@ -23,6 +23,7 @@ public abstract class Character {
 	private boolean isDefendingNow;
 	private double money;
 	private double buyBackMoney;
+	private int level;
 	
 	private String desc;
 	
@@ -53,6 +54,7 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setLevel(1);
 		this.setHealth(this.vitality);
 	} // End DVC
 
@@ -74,6 +76,7 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(0);
 		this.setBuyBackMoney(0);
+		this.setLevel(1);
 		this.setHealth(this.vitality);
 	} // End EVC
 	
@@ -95,6 +98,8 @@ public abstract class Character {
 		this.setDefendingNow(false);
 		this.setMoney(sellMoney);
 		this.setBuyBackMoney(backMoney);
+		this.setLevel(1);
+		this.setHealth(this.vitality);
 	} // End EVC
 	
 	public int fight() {
@@ -126,6 +131,7 @@ public abstract class Character {
 		if(this.experience >= this.cap)
 		{
 			this.setCap(this.cap * 2);
+			this.setLevel(this.level++);
 			addStats();
 			return true;
 		}
@@ -320,7 +326,7 @@ public abstract class Character {
 	public abstract SkillsMain [] getSkillNames();
 
 	public String toString() {
-		return this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
+		return "Level " + this.getLevel() + " " + this.getDesc() + " with " + this.getHealth() + "hp" + " and " + this.maxDmg + "dmg";
 	}
 
 	public boolean compareName(Character character){
@@ -329,5 +335,13 @@ public abstract class Character {
 	
 	public boolean compareName(String character){
 		return this.getDesc().equals(character);
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 } // End Character
