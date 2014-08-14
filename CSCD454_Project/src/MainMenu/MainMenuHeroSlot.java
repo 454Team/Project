@@ -53,6 +53,12 @@ public class MainMenuHeroSlot extends HeroSlot{
 		return temp;
 	}
 	
-	
+	@Override
+	public String toString(){
+		return 	"Hero : " + hero.toString() + "\n"+
+				"Weapon : " + weaponSlot.toString() + "\n"+ 
+				"head armor : " + headArmorSlot.toString() + "\n" + 
+				"Body armor : " + bodyArmorSlot.toString() + "\n";
+	}
 
 }
