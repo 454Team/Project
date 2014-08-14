@@ -124,9 +124,9 @@ public abstract class Character {
 		this.setLuck(this.luck + 1);	
 	}
 
-	public abstract void equip();
-	public abstract void useItem();
-	public abstract boolean isAlive();
+	public boolean isAlive() {
+		return this.vitality > 0;
+	}
 	
 	//Status Setters and Getters
 	public double getStrength() {

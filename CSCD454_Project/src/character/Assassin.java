@@ -19,27 +19,25 @@ public class Assassin extends Character {
 
 	@Override
 	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
+		super.specialAttack();	
 	}
-
+	
 	@Override
-	public void equip() {
-		// TODO Auto-generated method stub
-		
+	public void specialAttack2() {
+		super.specialAttack2();	
 	}
-
+	
 	@Override
-	public void useItem() {
-		// TODO Auto-generated method stub
-		
+	public void specialAttack3() {
+		super.specialAttack3();	
 	}
 
 	@Override
 	public boolean isAlive() {
-		return super.getVitality() > 0;
+		return super.isAlive();
 	}
 	
+	@Override
 	public String toString() {
 		return super.toString();
 	}

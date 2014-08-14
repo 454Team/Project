@@ -18,28 +18,27 @@ public class Rogue extends Character {
 	}
 
 	@Override
-	public void specialAttack() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void equip() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void useItem() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public boolean isAlive() {
-		return super.getVitality() > 0;
+		return super.isAlive();
 	}
 	
+	@Override
+	public void specialAttack() {
+		super.specialAttack();	
+	}
+	
+	@Override
+	public void specialAttack2() {
+		super.specialAttack2();	
+	}
+	
+	@Override
+	public void specialAttack3() {
+		super.specialAttack3();	
+	}
+	
+	
+	@Override
 	public String toString() {
 		return super.toString();
 	}
