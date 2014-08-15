@@ -94,7 +94,7 @@ public class Battlefield {
 						
 						int number = randomGenerator.nextInt(100);
 						
-					    if(number >60){
+					    if(number >90){
 					    	int specialdamage = hero.specialAttack();
 					    	System.out.println("hero special attack with " + specialdamage + " damages");
 							monster.loseHealth(specialdamage);				// monster attack if alive , ask users here

@@ -129,6 +129,7 @@ public class MainMenuGame {
 					+ "4). Exit.");
 			try{   
 				choice = kb.nextInt();
+				kb.nextLine();
 		    }
 		    catch(Exception e){
 		    	break;
@@ -166,6 +167,7 @@ public class MainMenuGame {
 					printHeroList();
 			try{   
 				heroChoice = kb.nextInt();
+				kb.nextLine();
 		    }
 		    catch(Exception e){
 		    	break;
@@ -177,6 +179,7 @@ public class MainMenuGame {
 					+ "4). Or Exit.\n");
 			try{   
 				choice = kb.nextInt();
+				kb.nextLine();
 		    }
 		    catch(Exception e){
 		    	break;
@@ -186,6 +189,7 @@ public class MainMenuGame {
 			System.out.println("Please enter what item you would like to equip: \n");
 			try{   
 				name = kb.nextLine();
+				kb.nextLine();
 		    }
 		    catch(Exception e){
 		    	break;
